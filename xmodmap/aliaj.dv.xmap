@@ -1,0 +1,90 @@
+! -*- mode: xmodmap -*-
+
+!—————————————————————————————————————————————————————————————————————
+! formato
+!—————————————————————————————————————————————————————————————————————
+
+! keycode <Id> = <Key> <Shift+Key> <Mode_switch> <Shift+Mode_switch> <AltGr+Key> <Shift+AltGr+Key>
+
+
+!—————————————————————————————————————————————————————————————————————
+! ĉefaj
+!—————————————————————————————————————————————————————————————————————
+
+clear Lock
+
+keysym Caps_Lock = Escape
+keysym Escape = Multi_key
+
+!! ?
+keycode 64 = Alt_L NoSymbol ISO_Level3_Shift
+keycode 168 = Alt_R NoSymbol ISO_Level3_Shift
+
+!! Left Window, Right Window
+keycode 133 = Mode_switch NoSymbol
+keycode 134 = Mode_switch NoSymbol
+
+!! Menu
+keycode 135 = Control_R
+
+!! Arrows
+keycode 111 = Up    NoSymbol KP_Up    uparrow
+keycode 116 = Down  NoSymbol KP_Down  downarrow
+keycode 113 = Left  NoSymbol KP_Left  leftarrow
+keycode 114 = Right NoSymbol KP_Right rightarrow
+
+!! Prior, Next, Home, End
+keycode 112 = Prior NoSymbol KP_Prior
+keycode 117 = Next  NoSymbol KP_Next
+keycode 110 = Home  NoSymbol KP_Home
+keycode 115 = End   NoSymbol KP_End
+
+
+!—————————————————————————————————————————————————————————————————————
+! interpunkcioj
+!—————————————————————————————————————————————————————————————————————
+
+keycode 48 = minus        underscore   endash               emdash
+keycode 49 = grave        asciitilde   leftsinglequotemark
+keycode 24 = apostrophe   quotedbl     rightsinglequotemark
+keycode 25 = comma        less         minutes              lessthanequal
+keycode 26 = period       greater      seconds              greaterthanequal
+keycode 34 = slash        question     division
+keycode 35 = equal        plus         notequal             identical
+keycode 51 = backslash    bar          Greek_lambda
+keycode 23 = Tab          ISO_Left_Tab
+keycode 65 = space        space        nobreakspace         hairspace
+keycode 20 = bracketleft  braceleft    leftdoublequotemark  guillemotleft
+keycode 21 = bracketright braceright   rightdoublequotemark guillemotright
+
+
+!—————————————————————————————————————————————————————————————————————
+! nombroj
+!—————————————————————————————————————————————————————————————————————
+
+keycode 10 = 1 exclam      logicaland union
+keycode 11 = 2 at          logicalor  intersection
+keycode 12 = 3 numbersign  implies    therefore
+keycode 13 = 4 dollar      nabla      integral
+keycode 14 = 5 percent     degree     partialderivative
+keycode 15 = 6 asciicircum notsign    ellipsis
+keycode 16 = 7 ampersand   variation  infinity
+keycode 17 = 8 asterisk    multiply   radical
+keycode 18 = 9 parenleft   includedin
+keycode 19 = 0 parenright  includes
+
+
+!—————————————————————————————————————————————————————————————————————
+! literoj
+!—————————————————————————————————————————————————————————————————————
+
+keycode 38 = a A ae          AE
+keycode 31 = c C ccircumflex Ccircumflex
+keycode 30 = g G gcircumflex Gcircumflex
+keycode 44 = h H hcircumflex Hcircumflex
+keycode 42 = i I icircumflex Icircumflex
+keycode 54 = j J jcircumflex Jcircumflex
+keycode 46 = n N ntilde      Ntilde
+keycode 47 = s S scircumflex Scircumflex
+keycode 41 = u U ubreve      Ubreve
+keycode 56 = x X multiply

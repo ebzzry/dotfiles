@@ -1,0 +1,87 @@
+! -*- mode: xmodmap -*-
+
+
+!---------------------------------------------------------------------------------------------------
+! formato
+!---------------------------------------------------------------------------------------------------
+
+! keycode <Id> = <Key> <Shift+Key> <Mode_switch> <Shift+Mode_switch> <AltGr+Key> <Shift+AltGr+Key>
+
+
+!---------------------------------------------------------------------------------------------------
+! ĉefaj
+!---------------------------------------------------------------------------------------------------
+
+!! Kp_Enter
+keycode 104 = Multi_key
+
+!! Kp_Home, Kp_End
+keycode 79 = Mode_switch
+keycode 87 = Mode_switch
+
+!! Arrows
+keycode 111 = Up    NoSymbol KP_Up    uparrow
+keycode 116 = Down  NoSymbol KP_Down  downarrow
+keycode 113 = Left  NoSymbol KP_Left  leftarrow
+keycode 114 = Right NoSymbol KP_Right rightarrow
+
+!! Prior, Next, Home, End
+keycode 112 = Prior NoSymbol Home
+keycode 117 = Next  NoSymbol End
+
+
+!---------------------------------------------------------------------------------------------------
+! interpunkcioj
+!---------------------------------------------------------------------------------------------------
+
+keycode 20 = bracketleft  braceleft    leftdoublequotemark  guillemotleft
+keycode 21 = bracketright braceright   rightdoublequotemark guillemotright
+keycode 23 = Tab          ISO_Left_Tab
+keycode 24 = apostrophe   quotedbl     rightsinglequotemark rightanglebracket
+keycode 25 = comma        less         minutes              seconds
+keycode 26 = period       greater      periodcentered
+keycode 34 = slash        question     division
+keycode 35 = equal        plus         notequal             identical
+keycode 48 = minus        underscore   endash               emdash
+keycode 49 = grave        asciitilde   leftsinglequotemark  leftanglebracket
+keycode 51 = backslash    bar
+keycode 65 = space        space        nobreakspace         hairspace
+
+
+!---------------------------------------------------------------------------------------------------
+! nombroj
+!---------------------------------------------------------------------------------------------------
+
+keycode 10 = 1 exclam
+keycode 11 = 2 at
+keycode 12 = 3 numbersign
+keycode 13 = 4 dollar      NoSymbol EuroSign
+keycode 14 = 5 percent
+keycode 15 = 6 asciicircum
+keycode 16 = 7 ampersand
+keycode 17 = 8 asterisk
+keycode 18 = 9 parenleft
+keycode 19 = 0 parenright
+
+
+!---------------------------------------------------------------------------------------------------
+! literoj
+!---------------------------------------------------------------------------------------------------
+
+keycode 30 = g G gcircumflex Gcircumflex
+keycode 31 = c C ccircumflex Ccircumflex
+keycode 41 = u U ubreve      Ubreve
+keycode 42 = i I icircumflex Icircumflex
+keycode 44 = h H hcircumflex Hcircumflex
+keycode 46 = n N ntilde      Ntilde
+keycode 47 = s S scircumflex Scircumflex
+keycode 54 = j J jcircumflex Jcircumflex
+keycode 56 = x X multiply
+keycode 61 = z Z openstar
+
+
+!---------------------------------------------------------------------------------------------------
+! signoj
+!---------------------------------------------------------------------------------------------------
+
+keycode 33 = l L Greek_lamda

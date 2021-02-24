@@ -1,0 +1,59 @@
+# -*- coding: utf-8 -*-
+
+# valutaj simboloj
+<Multi_key> <p> <p> : "₱"
+<Multi_key> <c> <equal> : "€"
+
+# makintoŝaj simboloj
+<Multi_key> <M> <c> : "⌘"
+<Multi_key> <M> <o> : "⌥"
+<Multi_key> <M> <s> : "⇧"
+
+# ñ kaj Ñ
+<Multi_key> <asciitilde> <n> : "ñ" U00F1
+<Multi_key> <asciitilde> <N> : "Ñ" U00D1
+
+# guillemet https://en.wikipedia.org/wiki/Guillemet#Guillemet_vs._guillemot
+<Multi_key> <less> <less> : "«"
+<Multi_key> <greater> <greater> : "»"
+
+# kopirajta kaj varmarka simboloj
+<Multi_key> <o> <c> : "©"
+<Multi_key> <t> <m> : "™"
+
+# cita haltostreko
+<Multi_key> <underscore> <underscore> : "―"
+
+# figura haltostreko
+<Multi_key> <underscore> <circumflex> : "‒"
+
+# malrompa streketo
+<Multi_key> <space> <minus> : "‑"
+
+# majuskletoj
+<Multi_key> <a> <s> : "ᴀ"
+<Multi_key> <b> <s> : "ʙ"
+<Multi_key> <c> <s> : "ᴄ"
+<Multi_key> <d> <s> : "ᴅ"
+<Multi_key> <e> <s> : "ᴇ"
+<Multi_key> <f> <s> : "ꜰ"
+<Multi_key> <g> <s> : "ɢ"
+<Multi_key> <h> <s> : "ʜ"
+<Multi_key> <i> <s> : "ɪ"
+<Multi_key> <j> <s> : "ᴊ"
+<Multi_key> <k> <s> : "ᴋ"
+<Multi_key> <l> <s> : "ʟ"
+<Multi_key> <m> <s> : "ᴍ"
+<Multi_key> <n> <s> : "ɴ"
+<Multi_key> <o> <s> : "ᴏ"
+<Multi_key> <p> <s> : "ᴘ"
+<Multi_key> <q> <s> : "ǫ"
+<Multi_key> <r> <s> : "ʀ"
+<Multi_key> <s> <s> : "s"
+<Multi_key> <t> <s> : "ᴛ"
+<Multi_key> <u> <s> : "ᴜ"
+<Multi_key> <v> <s> : "ᴠ"
+<Multi_key> <w> <s> : "ᴡ"
+<Multi_key> <x> <s> : "x"
+<Multi_key> <y> <s> : "ʏ"
+<Multi_key> <z> <s> : "ᴢ"

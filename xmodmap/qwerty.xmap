@@ -1,0 +1,41 @@
+!---------------------------------------------------------------------
+! Ĉefe
+!---------------------------------------------------------------------
+
+keycode 133 = Mode_switch
+keycode 134 = Mode_switch
+
+clear Lock
+keysym Caps_Lock = Escape
+keysym Escape = Multi_key
+
+
+!---------------------------------------------------------------------
+! Ĝusta tipografio
+!---------------------------------------------------------------------
+
+keycode 20 = minus        underscore   endash               emdash
+keycode 49 = grave        asciitilde   leftsinglequotemark
+keycode 48 = apostrophe   quotedbl     rightsinglequotemark
+keycode 59 = comma        less         minutes              seconds
+keycode 60 = period       greater      periodcentered
+keycode 61 = slash        question     division
+keycode 21 = equal        plus         notequal             identical
+keycode 51 = backslash    bar
+keycode 23 = Tab          ISO_Left_Tab
+keycode 65 = space        space        nobreakspace         hairspace
+keycode 34 = bracketleft  braceleft    leftdoublequotemark  guillemotleft
+keycode 35 = bracketright braceright   rightdoublequotemark guillemotright
+
+
+!---------------------------------------------------------------------
+! Esperanto-signoj
+!---------------------------------------------------------------------
+
+!! Qwerty
+keycode 54 = c C ccircumflex Ccircumflex
+keycode 42 = g G gcircumflex Gcircumflex
+keycode 43 = h H hcircumflex Hcircumflex
+keycode 44 = j J jcircumflex Jcircumflex
+keycode 39 = s S scircumflex Scircumflex
+keycode 30 = u U ubreve      Ubreve
