@@ -1,0 +1,43 @@
+# Local IspellDict: en
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2019 Jens Lechtenbörger
+
+#+OPTIONS: toc:nil reveal_width:1400 reveal_height:1000
+#+REVEAL_THEME: black
+
+#+Title: Splitting with attributes
+#+Author: Jens Lechtenbörger
+
+* Slide with normal split
+- The start of some
+- list
+- to be continued after split
+
+#+REVEAL: split
+
+- Continued list
+- with more items
+
+* Slide with split with background attribute
+- The start of some
+- list
+- to be continued after split
+- with sliding background image
+
+#+REVEAL: split data-background="../images/adult-education-3258944_640.jpg" data-background-transition="slide"
+
+- Continued list
+- with more items
+
+* Slide with background properties
+  :PROPERTIES:
+  :reveal_background: #543210
+  :END:
+Note that the background color of this slide does not change after the split.
+
+#+REVEAL: split
+
+Same background as previous slide.
+
+* Nothing special
+Default background again.

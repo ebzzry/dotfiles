@@ -1,0 +1,13 @@
+/**
+ * SPDX-FileCopyrightText: 2021 Jens Lechtenbörger
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ **/
+
+.reveal p, div {
+  text-align: left;
+}
+.reveal div.csl-bib-body {
+  overflow: auto;
+  padding-right: 5px;
+  max-height: 18em;
+}

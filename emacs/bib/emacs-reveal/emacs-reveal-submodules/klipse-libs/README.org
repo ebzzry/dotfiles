@@ -1,0 +1,10 @@
+# Local IspellDict: en
+# SPDX-FileCopyrightText: 2019,2021 Jens Lechtenbörger
+# SPDX-License-Identifier: CC0-1.0
+
+This repository contains unmodified files from other projects:
+- Subdirectory "dist" with license from https://github.com/viebel/klipse.git
+  under "klipse-dist"
+- Minified versions of CodeMirror libraries under license "codemirror.license"
+  - JavaScript libraries downloaded with download_codemirror.sh
+- https://github.com/skulpt/skulpt-dist.git as submodule
