@@ -1,0 +1,8 @@
+# Remap ESC to use my double 'h' keypress to toggle insert or movement
+# mode.
+$if mode=vi
+    set keymap vi-command
+    "hh": vi-insertion-mode
+    set keymap vi-insert
+    "hh": vi-movement-mode
+$endif

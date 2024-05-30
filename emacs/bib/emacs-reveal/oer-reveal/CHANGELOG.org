@@ -1,0 +1,804 @@
+# Local IspellDict: en
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2019-2022 Jens Lechtenbörger
+
+* Changelog
+This file is based on
+[[https://keepachangelog.com/en/1.0.0/][Keep a Changelog]],
+where version numbers starting with version 1.0.0 adhere to
+[[https://semver.org/spec/v2.0.0.html][Semantic Versioning]].
+
+
+** [Unreleased]
+** [4.5.0] - 2022-06-13
+*** Added
+    - URL parameter ~audio-speed~
+
+** [4.4.4] - 2022-06-03
+*** Fixed
+    - Update ~oer-reveal-submodules-version~ to 2.3.3
+
+** [4.4.3] - 2022-06-03
+*** Fixed
+    - Update ~oer-reveal-submodules-version~ to 2.3.2
+
+** [4.4.2] - 2022-05-16
+*** Changed
+    - Document potential for printed PDF files in [[file:org/reveal.js-hints.org]]
+
+** [4.4.1] - 2022-05-16
+*** Fixed
+    - Change opacity of SVG layers at any depth
+
+** [4.4.0] - 2022-04-02
+*** Added
+    - Variable ~oer-reveal-mobile-app~ to enable web app meta tags by
+      default
+*** Changed
+    - Update ~oer-reveal-submodules-version~ to 2.3.1
+
+** [4.3.1] - 2022-04-02
+*** Fixed
+    - Fix internal bibliography links.
+      Re-add assignment to ~org-re-reveal--href-fragment-prefix~
+      in ~oer-reveal-publish-setq-defaults~, which was removed in
+      version 4.0.0, leading to broken links.
+
+** [4.3.0] - 2022-03-21
+*** Added
+    - Function ~oer-reveal-publish-to-html-and-pdf~
+*** Fixed
+    - Do not modify ~oer-reveal-with-alternate-types~ in
+      ~oer-reveal-publish-to-pdf~.
+
+** [4.2.1] - 2022-03-21
+*** Fixed
+    - Add package ~textcomp~ in [[file:org/config.org]] to prevent
+      errors when using €
+
+** [4.2.0] - 2022-03-20
+*** Added
+    - Function ~oer-reveal-publish-to-pdf~
+
+** [4.1.2] - 2022-01-17
+*** Fixed
+    - Enable ~REVEAL_ADD_PLUGIN~ in addition to ~oer-reveal-plugin-4-config~.
+      Related to
+      [[https://gitlab.com/oer/emacs-reveal/-/issues/30][issue #30 of
+      emacs-reveal]]
+
+** [4.1.1] - 2021-12-07
+*** Fixed
+    - Update oer-reveal-submodules-version to 2.2.3
+
+** [4.1.0] - 2021-10-29
+*** Added
+    - [[file:css/oer-reveal.css::.reveal div.csl-bib-body][CSS]] for
+      new bibliography with ~csl-bib-body~
+
+** [4.0.0] - 2021-10-28
+*** Changed
+    - Prefer (temporary) let bindings over settings with setq in
+      oer-reveal-publish-setq-defaults, as the latter pollutes the
+      user’s environment
+*** Fixed
+    - Load grffile via oer-reveal-publish-latex-packages to avoid
+      option clash with older Org versions
+
+** [3.25.0] - 2021-10-15
+*** Changed
+    - Update oer-reveal-submodules-version to 2.2.2
+    - Use package grffile for LaTeX export to support figure names
+      with space characters
+
+** [3.24.0] - 2021-09-15
+*** Added
+    - Link type ~hasPart~ to markup (with RDFa) a link target as
+      learning resource that is part of the current document
+
+** [3.23.0] - 2021-08-27
+*** Added
+    - CSS rules in [[file:css/oer-reveal.css]] to show all questions of
+      quizzes when printing to PDF
+
+** [3.22.0] - 2021-08-25
+*** Added
+    - New variables ~oer-reveal-new-tab-url-regexp~ and
+      ~oer-reveal-no-new-tab-url-regexp~ with function
+      ~oer-reveal-filter-parse-tree~
+*** Changed
+    - Add ~oer-reveal-filter-parse-tree~ to
+      ~org-export-filter-parse-tree-functions~ in
+      ~oer-reveal-publish-setq-defaults~
+
+** [3.21.2] - 2021-08-19
+*** Fixed
+    - Use Org keyword headers in usage hints
+
+** [3.21.1] - 2021-08-19
+*** Fixed
+    - Mention new ~hidelinks~ value in usage hints
+
+** [3.21.0] - 2021-08-17
+*** Added
+    - Variable ~oer-reveal-anything-svg-opacity~ with keyword
+      ~OER_REVEAL_ANYTHING_SVG_OPACITY~ for export of animated (with
+      anything plugin) SVG images to PDF
+    - Variable ~oer-reveal-navigation-mode~ with keyword
+      ~OER_REVEAL_NAVIGATION_MODE~ to switch navigation mode of
+      reveal.js with URL parameter ~default-navigation~
+    - New link types “basic”, “beyond”, and “revisit” with different
+      CSS classes that open in new tabs as defined in new variable
+      ~oer-reveal-external-url-template~
+*** Changed
+    - Variable ~oer-reveal-audio-slideshow-config~ now understands URL
+      parameter ~audio-autoplay~ for autoplay of audios (with the
+      audio-slideshow plugin)
+
+** [3.20.2] - 2021-06-23
+*** Fixed
+    - Mention use of enter key in [[file:org/reveal.js-hints.org]] for
+      subsequent search hits.
+
+** [3.20.1] - 2021-05-21
+*** Fixed
+    - Move assignment to ~org-re-reveal--href-fragment-prefix~ from
+      ~oer-reveal-template~ back to ~oer-reveal-publish-setq-defaults~.
+      Reverts partial change of 3.14.0.
+
+** [3.20.0] - 2021-05-12
+*** Added
+    - Keyword ~OER_REVEAL_WITHOUT_SUBTITLE~ to exclude subtitles in
+      license statements per file.  This allows to selectively control
+      a change introduced in 3.18.0.
+
+** [3.19.0] - 2021-05-09
+*** Changed
+    - Mention sample keys in [[file:org/config-usage-notes.org]]
+      and [[file:org/config-usage-notes-de.org]]
+
+** [3.18.3] - 2021-04-18
+*** Fixed
+    - Add placeholder for notes to title page in ERCIS 2019 style,
+      point to usage notes
+
+** [3.18.2] - 2021-04-17
+*** Fixed
+    - Avoid clutter with license information in ERCIS 2019 style
+
+** [3.18.1] - 2021-04-17
+*** Fixed
+    - Define z-index for preamble and unify handling of title and
+      subtitle in ERCIS 2019 style
+
+** [3.18.0] - 2021-04-17
+*** Changed
+    - Function ~oer-reveal-license-to-fmt~ now includes the subtitle
+      in generated license information
+*** Added
+    - New optional argument ~without-subtitle~ in
+      ~oer-reveal-license-to-fmt~ to exclude subtitle from generated
+      license information
+
+** [3.17.1] - 2021-04-05
+*** Fixed
+    - Add small amounts of time to final slides to work with totalTime
+      of reveal.js
+
+** [3.17.0] - 2021-02-23
+*** Added
+    - Style file [[file:css/wwu-ercis.css]]
+
+** [3.16.1] - 2021-02-23
+*** Fixed
+    - Call ~oer-reveal--figure-path~ with two arguments
+
+** [3.16.0] - 2021-02-21
+*** Added
+    - Title slides
+      [[file:title-slide/course-mlde.html]] and
+      [[file:title-slide/kurs-mlde.html]]
+
+** [3.15.0] - 2021-01-07
+*** Added
+    - Variables ~oer-reveal-rdf-figure-typeof~ and
+      ~oer-reveal-rdf-caption-property~
+
+** [3.14.1] - 2021-01-06
+*** Fixed
+    - Remove redundant code from ~oer-reveal-publish-to-html~
+
+** [3.14.0] - 2021-01-06
+*** Added
+    - Variable ~oer-reveal-rdf-typeof~ with keyword ~OER_REVEAL_RDF_TYPEOF~
+    - Keyword ~OER_REVEAL_RDF_PREFIXES~
+    - Optional argument ~text-p~ in ~oer-reveal-license-to-fmt~
+*** Changed
+    - Added schema.org to ~oer-reveal-rdf-prefixes~
+    - Move assignments to variables of org-re-reveal from
+      ~oer-reveal-publish-setq-defaults~ to ~oer-reveal-template~
+    - Use ~oer-reveal-publish-to-html~ to publish "index.org"
+    - Use new argument for ~oer-reveal-license-to-fmt~ in
+      ~oer-reveal-publish-html-postamble~
+*** Deprecated
+    - Variable ~oer-reveal-dcmitype~
+
+** [3.13.0] - 2020-12-13
+*** Added
+    - Metadata files can now include relative paths to the image
+      files, which implies that oer-reveal changes such paths now.
+      See new variable ~oer-reveal-figures-dir~ how to turn this off.
+    - Variables
+      - [[file:oer-reveal.el::(defcustom oer-reveal-img-src][~oer-reveal-img-src~]]
+        to use macros ~revealimg~ and ~reveallicense~ also in HTML
+        export with ~oer-reveal-publish-to-html~
+      - [[file:oer-reveal.el::(defcustom oer-reveal-figures-dir][~oer-reveal-figures-dir~]]
+    - CSS for figures and tables in [[file:css/index.css]]
+*** Fixed
+    - Do not require org-ref
+
+** [3.12.0] - 2020-12-07
+*** Added
+    - Function [[file:oer-reveal.el::(defun oer-reveal-publish-to-html][~oer-reveal-publish-to-html~]]
+
+** [3.11.0] - 2020-12-07
+*** Added
+    - Link type “local” for references to local HTML files, without
+      the usual translation by Org mode (which may lead to unwanted
+      results for included files)
+      - See [[file:examples/test-local.org]]
+
+** [3.10.2] - 2020-12-07
+*** Fixed
+    - Use full URL for usage notes (instead of broken file link)
+
+** [3.10.1] - 2020-12-06
+*** Fixed
+    - Use pixel specifications (instead of vh) in image grids as
+      well.
+
+** [3.10.0] - 2020-12-05
+*** Added
+    - Unit "rh" (for Reveal.js Height instead of "vh" for Viewport
+      Height) to be used in max-height CSS specifications of images.
+      See comment before macro ~revealimg~ in
+      [[file:org/config.org][config.org]].
+
+** [3.9.0] - 2020-11-22
+*** Added
+    - Variable [[file:oer-reveal.el::(defcustom oer-reveal-license-font-factor][oer-reveal-license-font-factor]]
+
+** [3.8.2] - 2020-11-09
+*** Fixed
+    - Add horizontal scroll bar to ~pre~ in [[file:css/index.css]]
+
+** [3.8.1] - 2020-11-03
+*** Fixed
+    - In ~oer-reveal--language~, expand ~INCLUDE~ keywords to make
+      sure that the language is found
+
+** [3.8.0] - 2020-10-18
+*** Added
+    - Variable [[file:oer-reveal.el::(defcustom oer-reveal-plugin-4-config][oer-reveal-plugin-4-config]]
+*** Changed
+    - Update ~oer-reveal-submodules-version~ to 2.1.0, where
+      reveal.js-plugins use the API for reveal.js 4
+    - Update settings in
+      [[file:oer-reveal.el::(defcustom oer-reveal-plugin-config][oer-reveal-plugin-config]]
+      for reveal.js-plugins (in combination with new variable
+      ~oer-reveal-plugin-4-config~)
+
+** [3.7.0] - 2020-10-02
+*** Added
+    - Placeholder "%n" for speaker notes in title slides
+      [[file:title-slide/dbis-course.html]] and
+      [[file:title-slide/kurs.html]]
+    - Files [[file:org/config-usage-notes.org]] and
+      [[file:org/config-usage-notes-de.org]]
+*** Deprecated
+    - File [[file:org/config-title-notes.org]]
+
+** [3.6.0] - 2020-10-02
+*** Added
+    - Marco ~abbr~ in [[file:org/config.org]]
+
+** [3.5.0] - 2020-09-21
+*** Added
+    - Variables [[file:oer-reveal-publish.el::(defcustom oer-reveal-publish-html-container-element "section"][oer-reveal-publish-html-container-element]]
+      and [[file:oer-reveal-publish.el::(defcustom oer-reveal-publish-html-divs][oer-reveal-publish-html-divs]]
+
+** [3.4.0] - 2020-09-21
+*** Added
+    - Variable [[file:oer-reveal-publish.el::(defcustom oer-reveal-publish-html-text-markup-alist][oer-reveal-publish-html-text-markup-alist]]
+
+** [3.3.1] - 2020-09-15
+*** Fixed
+    - Make custom links for colored text compatible with Org 9.4
+
+** [3.3.0] - 2020-08-24
+*** Changed
+    - More entries in ~oer-reveal-dictionaries~ allow to customize
+      language-specific title attributes in link elements for
+      alternate types; const ~oer-reveal-alternate-type-config~ uses
+      new entries by default
+    - Optional ~backend~ argument in function
+      ~oer-reveal-add-alternate-types~ allows to specify different
+      title attribute for HTML and reveal.js export and uses new entries
+      in ~oer-reveal-dictionaries~
+*** Fixed
+    - Use correct customization type for
+      ~oer-reveal-publish-html-postamble~
+
+** [3.2.1] - 2020-08-13
+*** Fixed
+    - Use green color introduced for higher contrast in version 3.1.2
+      in more places
+
+** [3.2.0] - 2020-08-13
+*** Added
+    - Enable export of speaker notes to PDF in [[file:org/config.org]]
+*** Changed
+    - Require org-re-reveal 3.1.0
+
+** [3.1.3] - 2020-08-12
+*** Fixed
+    - Avoid duplicate slashes for ~about~ URI in
+      [[file:oer-reveal.el::(defun oer-reveal-license-to-fmt][oer-reveal-license-to-fmt]]
+
+** [3.1.2] - 2020-08-06
+*** Fixed
+    - Improve contrast in [[file:css/oer-reveal.css]] and
+      [[file:css/dbis.css]] for WCAG compliance
+
+** [3.1.1] - 2020-07-26
+*** Added
+    - Class hiddenlink in [[file:css/oer-reveal.css]]
+
+** [3.1.0] - 2020-07-26
+*** Added
+    - File [[file:css/hidelinks.js]] to selectively hide links
+      (activated in [[file:org/config.org]])
+*** Fixed
+    - Add placeholder for title in figure with caption
+
+** [3.0.0] - 2020-06-27
+*** Added
+    - Support for reveal.js 4.x
+    - Variable [[file:oer-reveal.el::(defcustom oer-reveal-revealjs-version "4"][oer-reveal-revealjs-version]]
+      with keyword ~OER_REVEAL_REVEALJS_VERSION~ for support of
+      reveal.js 4.x
+*** Changed
+    - Require org-re-reveal 3.0.0, which supports reveal.js 4.x
+    - Initialization of speaker notes and toc-progress plugin for
+      reveal.js 4.x
+    - Paths for reveal.js 4.x
+*** Removed
+    - Variable ~oer-reveal-script-files~
+
+** [2.15.1] - 2020-06-23
+*** Fixed
+    - Split years separated by commas in copyright years
+
+** [2.15.0] - 2020-06-11
+*** Added
+    - Variable [[file:oer-reveal.el::(defcustom oer-reveal-warning-delay t][oer-reveal-warning-delay]]
+*** Fixed
+    - Document ~+~ key to toggle audio
+
+** [2.14.0] - 2020-06-11
+*** Changed
+    - Update ~oer-reveal-submodules-version~ to 1.4.0
+
+** [2.13.0] - 2020-06-10
+*** Added
+    - Publish dependencies of figures
+
+** [2.12.0] - 2020-05-03
+*** Added
+    - Macro [[file:org/config-ercis2019.org][contactpreamble]]
+*** Changed
+    - Marco [[file:org/config-ercis2019.org][contactinfo]] uses new
+      macro ~contactpreamble~
+*** Fixed
+    - PDF export of contact information for ERCIS style
+
+** [2.11.0] - 2020-05-02
+*** Added
+    - German ERCIS config [[file:org/config-ercis2019-de.org]]
+    - German ERCIS title [[file:title-slide/ercis2019-vortrag.html]]
+
+** [2.10.0] - 2020-04-28
+*** Changed
+    - Update ~oer-reveal-submodules-version~ to 1.3.0
+*** Fixed
+    - Publish contents of klipse-libs recursively to include local fonts
+
+** [2.9.0] - 2020-04-13
+*** Added
+    - Customizable variables [[file:oer-reveal.el::(defcustom oer-reveal-spdx-author][oer-reveal-spdx-author]]
+      and [[file:oer-reveal.el::(defcustom oer-reveal-spdx-copyright-regexp][oer-reveal-spdx-copyright-regexp]]
+    - Function [[file:oer-reveal.el::(defun oer-reveal-copyright-check][oer-reveal-copyright-check]]
+      warns about outdated copyright years; use as ~after-save-hook~
+
+** [2.8.3] - 2020-04-07
+*** Fixed
+    - Document audio Play Speed in usage hints
+
+** [2.8.2] - 2020-04-06
+*** Fixed
+    - Make code elements more visible in ~css/index.css~
+
+** [2.8.1] - 2020-04-02
+*** Fixed
+    - Update ~oer-reveal-submodules-version~ for bug fix in
+      reveal.js-plugins
+
+** [2.8.0] - 2020-03-31
+*** Added
+    - Customizable variable [[file:oer-reveal.el::(defcustom oer-reveal-master t][oer-reveal-master]]
+      - Allow to export from included file; simplified variant of
+        AUCTeX’s master functionality
+*** Changed
+    - Use new variable in export functions such as
+      ~oer-reveal-export-to-html~
+
+** [2.7.2] - 2020-03-25
+*** Fixed
+    - Increase height of and remove box for quizzes in [[file:css/dbis.css][css/dbis.css]]
+
+** [2.7.1] - 2020-03-24
+*** Fixed
+    - Overwrite fixed height of quizzes in [[file:css/dbis.css][css/dbis.css]]
+
+** [2.7.0] - 2020-03-24
+*** Added
+    - Files [[file:css/index.css][css/index.css]] and
+      [[file:quizzes/usage-hints.js][examples/quizzes/usage-hints.js]]
+*** Changed
+    - Publish sample quizzes under [[file:examples/quizzes][examples/quizzes]]
+      (currently just one) in ~oer-reveal-publish-all~
+
+** [2.6.0] - 2020-03-18
+*** Added
+    - File [[file:org/learning-objectives-notes.org][org/learning-objectives-notes.org]]
+
+** [2.5.1] - 2020-03-15
+*** Fixed
+    - Update ~oer-reveal-submodules-version~ for bug fix in
+      reveal.js-coursemod plugin
+
+** [2.5.0] - 2020-03-13
+*** Changed
+    - Former const ~oer-reveal-submodules-version~ is now a customizable
+      variable that can be set to a Git version tag (as before) or to nil
+    - Function ~oer-reveal-submodules-ok-p~ returns t if
+      ~oer-reveal-submodules-version~ is nil
+
+** [2.4.1] - 2020-03-08
+*** Fixed
+    - Correct invocation of ~oer-reveal-git-version-string~ and
+      changelog entry for 2.4.0
+
+** [2.4.0] - 2020-03-08
+*** Added
+    - Refactor functionality to determine git version (tag) for
+      directory from ~oer-reveal-submodules-ok-p~ to new function
+      ~oer-reveal-git-version-string~
+
+** [2.3.1] - 2020-03-06
+*** Fixed
+    - Properly treat "pdf" in ~oer-reveal-add-alternate-types~, with
+      test case
+
+** [2.3.0] - 2020-03-06
+*** Added
+    - Variable [[file:oer-reveal.el::(defcustom oer-reveal-use-year-ranges-p t][oer-reveal-use-year-ranges-p t]]
+      controls whether consecutive copyright years are merged into
+      ranges (e.g., “2017, 2018, 2019” to “2017-2019”)
+    - Plugin reveal-a11y for improved accessibility in
+      ~oer-reveal-plugins~; with backend option
+      ~oer-reveal-a11y-dependency~, update of
+      ~oer-reveal-submodules-version~ to 1.2.0
+*** Changed
+    - Merge author information from multiple SPDX headers
+*** Fixed
+    - Do not produce duplicate license information
+    - Support colored links with different Org versions (using
+      org-add-link-type or org-link-set-parameters)
+    - Only add LaTeX title footnote if PDF is requested in
+      oer-reveal-with-alternate-types
+
+** [2.2.2] - 2020-03-03
+*** Fixed
+    - In ~oer-reveal--file-as-string~, decode file contents to UTF-8
+    - In ~oer-reveal--attribute-author~, allow empty licensetext if
+      permit is given
+
+** [2.2.1] - 2020-03-01
+*** Fixed
+    - Set ~oer-reveal-submodules-version~ to 1.1.1
+      - Update emacs-reveal-submodules for update of reveal.js jump
+        plugin
+
+** [2.2.0] - 2020-01-24
+*** Changed
+    - Set ~oer-reveal-submodules-version~ to 1.1.0
+      - Bug in reveal.js jump plugin fixed upstream
+      - Update of reveal.js-plugins to master version
+
+** [2.1.1] - 2020-01-07
+*** Fixed
+    - Do not try to copy external figures in ~oer-reveal--copy-for-export~
+
+** [2.1.0] - 2020-01-02
+*** Added
+    - Variable [[file:oer-reveal.el::(defcustom oer-reveal-copy-dir-suffix][oer-reveal-copy-dir-suffix]]
+      controls copying of embedded OER figures to separate directory
+      for publication of relevant subset of figures
+      - With helper function [[file:oer-reveal.el::(defun oer-reveal--copy-for-export][oer-reveal--copy-for-export]]
+*** Changed
+    - Use ~oer-reveal--copy-for-export~ in
+      [[file:oer-reveal.el::(defun oer-reveal--attribution-strings][oer-reveal--attribution-strings]]
+    - Respect ~oer-reveal-copy-dir-suffix~ in publication setup in
+      [[file:oer-reveal-publish.el::(defun oer-reveal-publish-optional-projects][oer-reveal-publish-optional-projects]]
+*** Fixed
+    - Raise useful error if SPDX license is unknown in
+      ~oer-reveal--convert-license~
+
+** [2.0.4] - 2020-01-02
+*** Fixed
+    - Trim title string in ~oer-reveal-license-to-fmt~
+
+** [2.0.3] - 2019-12-31
+*** Fixed
+    - Allow usernames in GitLab URLs
+    - Recognize repositories for GitLab Pages
+
+** [2.0.2] - 2019-12-31
+*** Fixed
+    - Make suffix “.git” in GitLab URLs optional
+
+** [2.0.1] - 2019-12-31
+*** Changed
+    - Use ~oer-reveal-publish-to-reveal-and-pdf~ in
+      ~oer-reveal-publish-org-publishing-functions~
+*** Fixed
+    - Trim after matching is finished in ~oer-reveal--convert-creator~
+
+** [2.0.0] - 2019-12-31
+*** Added
+    - Functionality to generate license information for HTML and LaTeX
+      (PDF) export based on SPDX headers (in English and German,
+      customizable for more languages) with test cases
+      - Org header keywords ~SPDX-FILECOPYRIGHTTEXT~ and
+        ~SPDX-LICENSE-IDENTIFIER~
+      - Variables for license information
+        - ~oer-reveal-dictionaries~
+        - ~oer-reveal-licenses~
+        - ~oer-reveal-rdf-prefixes~ ~oer-reveal-dcmitype~,
+        - ~oer-reveal-created-template~
+      - Function ~oer-reveal-license-to-fmt~ (with helper functions)
+        to generate license statement
+    - Functionality to configure alternate type links based on GitLab
+      URLs with test cases
+      - Function ~oer-reveal-publish-to-reveal-and-pdf~ to generate
+        HTML presentation and PDF variant, where the HTML presentation
+        embeds alternate type links to its source file and the PDF
+        variant
+      - Function ~oer-reveal-insert-alternate-types~ (based on
+        ~oer-reveal-add-alternate-types~, with helper functions) to
+        insert Org code for alternate type links
+      - Variable ~oer-reveal-publish-alternate-type-function~ to
+        activate ~oer-reveal-insert-alternate-types~ as
+        ~org-export-before-processing-hook~ (or not).
+*** Changed
+    - Fourth argument ~basename~ of function
+      ~oer-reveal-add-alternate-types~ is no longer optional
+    - Variable ~oer-reveal-alternate-types~ is now the ~defconst~
+      ~oer-reveal-alternate-type-config~
+    - Variable ~oer-reveal-publish-html-postamble~
+      invokes ~oer-reveal-license-to-fmt~
+    - Function ~oer-reveal-publish-setq-defaults~
+      - Use ~oer-reveal-rdf-prefixes~ and ~oer-reveal-dcmitype~ to
+        assign value to ~org-re-reveal-body-attrs~
+      - Add ~oer-reveal-publish-alternate-type-function~ to
+        ~org-export-before-processing-hook~
+    - Files ~license-template.org~ and ~license-template-de.org~ use
+      ~oer-reveal-license-to-fmt~
+*** Removed
+    - File ~org/config-alternate-types.org~
+    - Variable ~oer-reveal-publish-html-attributionURL~
+    - Functions (deprecated since 1.3.0)
+      ~oer-reveal-add-to-init-script~ and ~oer-reveal-setup-plugins~
+
+** [1.15.0] - 2019-12-21
+*** Added
+    - Support ~typeof~ attribute for figures with
+      [[https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/][DCMI Types]]
+      - New argument ~dcmitype~ in
+        [[file:oer-reveal.el::(defun oer-reveal--export-figure-html][oer-reveal--export-figure-html]];
+        value from attribute ~dcmitype~ of meta-data file
+    - Variable [[file:oer-reveal-publish.el::(defcustom oer-reveal-publish-html-attributionURL][oer-reveal-publish-html-attributionURL]]
+      - Used in refactored [[file:oer-reveal-publish.el::(defcustom oer-reveal-publish-html-postamble][oer-reveal-publish-html-postamble]]
+*** Changed
+    - Assign also prefix for ~dcmitype~ as ~body~ attribute in
+      [[file:oer-reveal-publish.el::(defun oer-reveal-publish-setq-defaults ()][oer-reveal-publish-setq-defaults]]
+    - Add ~typeof~ to ~oer-reveal--figure-div-template~
+      and ~oer-reveal--svg-div-template~
+*** Fixed
+    - Do not use dc:creator without URI (in
+      ~oer-reveal-publish-html-postamble~ and
+      ~oer-reveal--attribute-author~)
+
+** [1.14.0] - 2019-12-20
+*** Added
+    - Create LaTeX toc in [[file:org/config.org::insert-agenda][insert-agenda]]
+    - New file file:org/config-title-notes.org
+    - Support for HTML link elements pointing to alternate types
+      - New file file:org/config-alternate-types.org with user-facing
+        function [[file:org/config-alternate-types.org::org-add-alternate-types][org-add-alternate-types]]
+      - New variable [[file:oer-reveal.el::(defcustom oer-reveal-alternate-types][oer-reveal-alternate-types]]
+        with new function [[file:oer-reveal.el::(defun oer-reveal-add-alternate-types][oer-reveal-add-alternate-types]]
+    - New variable [[file:oer-reveal.el::(defcustom oer-reveal-default-figure-title][oer-reveal-default-figure-title]]
+*** Changed
+    - Move functions ~default-usage-notes~ and ~title-notes-subtitle~
+      from file:org/config.org to new file file:org/config-title-notes.org
+    - Refactor HTML license information.  Generate RDFa (~rel~
+      attributes for license and source) also for short licenses.
+
+** [1.13.3] - 2019-10-24
+*** Fixed
+    - When installing/updating submodules, make sure that they have
+      been initialized at least once.
+
+** [1.13.2] - 2019-10-21
+*** Fixed
+    - Add missing tag in ERCIS preamble
+
+** [1.13.1] - 2019-10-21
+*** Fixed
+    - Restrict max-width of image grid to 90%
+    - Remove max-width from grid images, which is default anyways
+
+** [1.13.0] - 2019-10-20
+*** Changed
+    - Require version 2.12.0 of org-re-reveal
+    - Respect ~org-re-reveal-client-multiplex-filter~ in
+      ~oer-reveal-publish-to-reveal-client~
+
+** [1.12.0] - 2019-10-17
+*** Changed
+    - Update submodules to version 1.0.0 with changed directory
+      structure for CodeMirror files.
+
+** [1.11.0] - 2019-10-16
+*** Added
+    - File [[file:org/finalslide-ercis.org]]
+    - New optional (final) argument to add attributes to div elements
+      for figures (in macros ~revealimg()~ and ~reveallicense()~ in
+      [[file:org/config.org]] and supporting functions
+      ~oer-reveal--export-figure-html~ and
+      ~oer-reveal--attribution-strings~), e.g., to assign
+      ~data-fragment-index~
+*** Changed
+    - Use include in [[file:org/backmatter-ercis.org]] for
+      [[file:org/finalslide-ercis.org]]
+*** Fixed
+    - Use new logo in [[file:title-slide/ercis2019-talk-online-qr.html]]
+
+** [1.10.0] - 2019-10-14
+*** Added
+    - Configuration, CSS, and HTML title slides for new ERCIS layout
+    - Functions ~insert-agenda~ and ~title-notes-subtitle~ in [[file:org/config.org]]
+    - Macro BR in [[file:org/config.org]]
+
+** [1.9.0] - 2019-10-10
+*** Changed
+    - Update ~oer-reveal-submodules-version~ to 0.11.0
+*** Fixed
+    - Address issue #2
+      - Make function [[file:oer-reveal-publish.el::(defun%20oer-reveal-publish-all][oer-reveal-publish-all]]
+        interactive
+      - Improve documentation
+
+** [1.8.0] - 2019-10-04
+*** Added
+    - Macros BO and BC in [[file:org/config.org]]
+    - Add textbackslash to org-entities-user in [[file:oer-reveal-publish.el::(defun%20oer-reveal-publish-setq-defaults][oer-reveal-publish-setq-defaults]]
+
+** [1.7.0] - 2019-09-28
+*** Changed
+    - Update emacs-reveal-submodules to version with klipse
+    - Publish plugin files only if configured in ~oer-reveal-plugins~
+
+** [1.6.1] - 2019-09-16
+*** Fixed
+    - Do not display folder icon on question slide of ERCIS theme
+    - In view of heights, remove margin on title-license
+
+** [1.6.0] - 2019-09-13
+*** Added
+    - Variable
+      [[file:oer-reveal-publish.el::(defcustom%20oer-reveal-publish-descriptive-links][oer-reveal-publish-descriptive-links]]
+    - 7th argument for macro ~revealgrid~ can take the value ~grid~ to
+      have the grid appear as whole
+    - ERCIS style [[file:title-slide/ercis-talk-online-qr.html]]
+*** Changed
+    - Update dependency for org-re-reveal to version 2.5.0
+    - Overhaul of CSS and title slide for ERCIS master
+*** Fixed
+    - Add forgotten ox-oer-reveal.el
+    - Use URL encoding for src and about attributes of figures
+    - Do not embed oer-reveal.css twice
+    - Do not display folder icon on title slide
+
+** [1.5.0] - 2019-09-10
+*** Added
+    - Optional 7th argument for macro ~revealgrid~ in
+      [[file:org/config.org]] and function
+      [[file:oer-reveal.el::(defun%20oer-reveal--export-image-grid-helper][oer-reveal--export-image-grid-helper]]
+*** Changed
+    - Padding-right for rotated license information in
+      [[file:css/oer-reveal.css]] increased from 2vw to 4vw
+
+** [1.4.0] - 2019-09-07
+*** Changed
+    - Variable ~oer-reveal-publish-org-publishing-functions~ now
+      contains ~oer-reveal-publish-to-reveal~ instead of
+      ~org-re-reveal-publish-to-reveal~.
+
+** [1.3.0] - 2019-09-07
+*** Added
+    - [[file:oer-reveal.el::(defun%20oer-reveal-define-backend%20()][Define]]
+      derived backend ~oer-reveal~ with key bindings per
+      [[file:oer-reveal.el::(defcustom%20oer-reveal-keys][oer-reveal-keys]]
+    - Backend options (variables with keywords)
+      - ~oer-reveal-plugins~ with ~OER_REVEAL_PLUGINS~
+      - ~oer-reveal-anything-dependency~ with ~OER_REVEAL_ANYTHING_DEPENDENCY~
+      - ~oer-reveal-anything-config~ with ~OER_REVEAL_ANYTHING_CONFIG~
+      - ~oer-reveal-audio-slideshow-dependency~ with ~OER_REVEAL_AUDIO_SLIDESHOW_DEPENDENCY~
+      - ~oer-reveal-audio-slideshow-config~ with ~OER_REVEAL_AUDIO_SLIDESHOW_CONFIG~
+      - ~oer-reveal-coursemod-dependency~ with ~OER_REVEAL_COURSEMOD_DEPENDENCY~
+      - ~oer-reveal-coursemod-config~ with ~OER_REVEAL_COURSEMOD_CONFIG~
+      - ~oer-reveal-jump-dependency~ with ~OER_REVEAL_JUMP_DEPENDENCY~
+      - ~oer-reveal-quiz-dependency~ with ~OER_REVEAL_QUIZ_DEPENDENCY~
+      - ~oer-reveal-toc-progress-dependency~ with ~OER_REVEAL_TOC_PROGRESS_DEPENDENCY~
+    - Export and publish functions
+      - ~oer-reveal-publish-to-reveal~ with ~oer-reveal-publish-to-reveal-client~
+      - ~oer-reveal-export-to-html~ with
+        ~oer-reveal-export-to-html-and-browse~ and ~oer-reveal-export-current-subtree~
+      - ~oer-reveal-template~
+    - Variable [[file:oer-reveal.el::(defcustom%20oer-reveal-plugin-config][oer-reveal-plugin-config]]
+*** Deprecated
+    - Functions [[file:oer-reveal.el::(defun%20oer-reveal-add-to-init-script][oer-reveal-add-to-init-script]]
+      and [[file:oer-reveal.el::(defun%20oer-reveal-setup-plugins][oer-reveal-setup-plugins]]
+
+** [1.2.0] - 2019-08-26
+*** Added
+    - Variables
+      [[file:oer-reveal.el::(defcustom%20oer-reveal-quiz-dependency][oer-reveal-quiz-dependency]]
+      and [[file:oer-reveal.el::(defcustom%20oer-reveal-coursemod-config][oer-reveal-coursemod-config]]
+
+** [1.1.1] - 2019-08-23
+*** Fixed
+    - Do not import CSS (redundantly)
+    - Add ~!important~ to TOC progress settings (necessary, when CSS
+      registration is successful)
+
+** [1.1.0] - 2019-08-23
+*** Added
+    - ERCIS title slide file:title-slide/ercis-talk-online.html with
+      CSS file:css/ercis-quote.css
+    - Variable [[file:oer-reveal.el::(defcustom%20oer-reveal-toc-progress-dependency][oer-reveal-toc-progress-dependency]]
+
+** [1.0.0] - 2019-08-21
+*** Changed
+    - Switch to ~org-re-reveal~ 2.0.0
+
+# Remember
+# - Change types: Added, Changed, Deprecated, Removed, Fixed, Security
+# - Versions: Major.Minor.Patch
+#   - Major for incompatible changes
+#   - Minor for backwards compatible changes
+#   - Patch for backwards compatible bug fixes
+# - Might use Ma.Mi.P-alpha < Ma.Mi.P-alpha.1 < Ma.Mi.P-beta
