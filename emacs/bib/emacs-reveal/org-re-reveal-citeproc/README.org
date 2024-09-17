@@ -1,0 +1,105 @@
+# Local IspellDict: en
+#+STARTUP: showeverything
+
+#+SPDX-FileCopyrightText: 2019-2021 Jens Lechtenbörger <https://lechten.gitlab.io/#me>
+#+SPDX-License-Identifier: GPL-3.0-or-later
+
+* Badges :noexport:
+[[https://stable.melpa.org/#/org-re-reveal-citeproc][https://stable.melpa.org/packages/org-re-reveal-citeproc-badge.svg]]
+[[https://melpa.org/#/org-re-reveal-citeproc][https://melpa.org/packages/org-re-reveal-citeproc-badge.svg]]
+
+# Neither generate table of contents nor section numbers
+#+OPTIONS: toc:nil num:nil
+
+# Enable: browser history, fragment IDs in URLs, mouse wheel, links between presentations
+#+OPTIONS: reveal_history:t reveal_fragmentinurl:t
+#+OPTIONS: reveal_mousewheel:t reveal_inter_presentation_links:t
+#+OPTIONS: reveal_width:1400 reveal_height:1000
+#+OPTIONS: timestamp:nil
+
+#+REVEAL_TRANS: fade
+#+REVEAL_THEME: white
+#+REVEAL_PLUGINS: (search zoom)
+#+REVEAL_TITLE_SLIDE: <h1 class="title">%t</h1><h3 class="subtitle">%s</h3><h2 class="author">%a</h2><h2 class="date">%d</h2>
+#+REVEAL_EXTRA_CSS: ./local.css
+
+# Declare bibliography with style:
+#+bibliography: references.bib
+#+cite_export: csl
+
+#+TITLE: Sample presentation with bibliography
+#+SUBTITLE: (Press ~?~ for help; ~n~ and ~p~ for next and previous slide)
+#+AUTHOR: Jens Lechtenbörger
+#+DATE: October 2021
+
+* Introduction
+Project ~org-re-reveal-citeproc~ extends
+[[https://gitlab.com/oer/org-re-reveal/][org-re-reveal]]
+with support for a bibliography slide.
+This file provides an example for the citation syntax introduced in
+[[https://orgmode.org/][Org mode]] 9.5.  It can be exported
+1. as [[https://revealjs.com/][reveal.js]] presentation with a
+   bibliography slide,
+2. to a plain HTML document, or
+3. to PDF (via LaTeX).
+
+*Beware!* Thanks to Org mode syntax, some headers (with Org commands
+and comments) are not displayed (properly) on GitLab.
+
+* Installation
+   - Install [[https://revealjs.com/][reveal.js]] and ~org-re-reveal~
+     (from MELPA or [[https://gitlab.com/oer/org-re-reveal/][GitLab]])
+   - Install recent (version 9.5) of [[https://orgmode.org/][Org mode]]
+     and
+     [[https://github.com/andras-simonyi/citeproc-el][citeproc-el]]
+     (~citeproc~ on MELPA)
+   - Activate ~org-re-reveal-citeproc~
+     - Place this directory into your load path or install it from
+       [[https://melpa.org/#/getting-started][MELPA]]
+     - Place following into your "~/.emacs" and restart
+       #+begin_src emacs-lisp
+(require 'org-re-reveal-citeproc)
+(add-to-list 'org-export-filter-paragraph-functions
+             #'org-re-reveal-citeproc-filter-cite)
+       #+end_src
+   - Load an Org file and export it to HTML
+     - Make sure that reveal.js is available in your current directory
+       (e.g., as sub-directory or symbolic link)
+     - Load "README.org" (coming with ~org-re-reveal-citeproc~)
+     - Export to HTML: Press ~C-c C-e v v~ (write HTML file) or
+       ~C-c C-e v b~ (write HTML file and open in browser)
+
+* Outlook
+   - Teaching and learning resources should be free and open
+     - In support of
+       [[https://www.sdg4education2030.org/the-goal][Sustainable Development Goal 4 (SDG 4)]]
+     - [[https://en.wikipedia.org/wiki/Open_educational_resources][Open Educational Resources (OER)]]
+       - See [cite:@HWS+10] for technical and legal requirements of OER
+   - My OER requirements (spelled out in German in [cite:@Lec19])
+     - (Re-) Usable with [[https://en.wikipedia.org/wiki/Free_and_open-source_software][FLOSS]]
+     - Following paradigm of single sourcing (see [cite:@Roc01])
+     - Platform independent, also offline use
+     - Support proper license attribution beyond copy&paste
+       - Tool support with [[https://gitlab.com/oer/emacs-reveal][emacs-reveal]]
+         (see [cite:@Lec19b;@Lec19c])
+   - TODO: Emacs-reveal should contain ~org-re-reveal-citeproc~ soon
+
+* Summary
+   - Use ~cite~ links of Org mode 9.5
+   - Insert bibliography on separate slide with ~print_bibliography~
+     - See next slide
+     - Important: You must use a ~CUSTOM_ID~ on that slide, whose
+       value is that of customizable variable ~org-re-reveal-citeproc-bib~
+
+* Bibliography
+   :PROPERTIES:
+   :CUSTOM_ID: bibliography
+   :END:
+
+#+print_bibliography:
+
+
+* License Information
+This file is published under the terms of the GNU General Public
+License as published by the Free Software Foundation; either
+version 3, or (at your option) any later version.

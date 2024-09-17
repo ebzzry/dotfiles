@@ -1,0 +1,106 @@
+# Local IspellDict: en
+#+STARTUP: showeverything
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2019 Jens Lechtenbörger
+
+#+OPTIONS: reveal_width:1400 reveal_height:1000
+#+REVEAL_THEME: black
+
+# Enable klipse, but disable scaling, which interferes.
+#+OPTIONS: reveal_klipsify_src:t
+#+REVEAL_MIN_SCALE: 1.0
+#+REVEAL_MAX_SCALE: 1.0
+
+# Some optional settings for CodeMirror.
+#+REVEAL_CODEMIRROR_CONFIG: codemirror_options_in: {
+#+REVEAL_CODEMIRROR_CONFIG:   lineNumbers: true,
+#+REVEAL_CODEMIRROR_CONFIG:   autoCloseBrackets: true
+#+REVEAL_CODEMIRROR_CONFIG: }
+
+#+Title: Test klipsify
+#+Author: Jens Lechtenbörger
+
+
+* Different languages
+** HTML and CSS
+#+ATTR_REVEAL: :code_attribs roll-in
+#+BEGIN_SRC html
+<style>
+h1.demo-headline { color: blue; }
+p.demo-para { color: green; }
+#demo-id { color: yellow; }
+</style>
+<h1 class="demo-headline">Hello World!</h1>
+<p class="demo-para">This is a paragraph of text with class “demo-para”.</p>
+<p id="demo-id">This is another paragraph with id “demo-id”.</p>
+#+END_SRC
+
+** JavaScript
+# Code copied from Readme.org
+#+BEGIN_SRC js
+console.log("success");
+var x='string using single quote';
+x
+#+END_SRC
+
+** Python
+# Code copied from howto.org of emacs-reveal-howto
+#+BEGIN_SRC python
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(10))
+#+END_SRC
+
+** Clojure
+# Code copied from there:
+# https://github.com/timothypratley/asciidoctor-revealjs-klipse/issues/8
+#+begin_src clojure
+(defn greet [person]
+  (str "Hello " person))
+(map greet ["Alice" "Bob" "Carol"])
+#+end_src
+
+* SQL as example of state across slides
+** SQL, Populate Database
+   #+begin_src sql
+   CREATE TABLE Software (Name, License, Rating);
+   INSERT INTO Software VALUES
+      ("GNU Emacs", "GPLv3", 5),
+      ("GNU/Linux", "FLOSS", 5),
+      ("Powerpoint", "Proprietary", 3);
+   #+end_src
+
+** SQL, Query 1
+   #+begin_src sql
+   SELECT * FROM Software;
+   #+end_src
+
+** SQL, Query 2
+   #+begin_src sql
+   SELECT Name FROM Software WHERE Rating = 5;
+   #+end_src
+
+
+* An exception, no klipse here
+#+ATTR_REVEAL: :no-klipsify t
+#+BEGIN_SRC python
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(10))
+#+END_SRC
+
+
+# The following prevents replacement of 8 spaces with tabs,
+# which would destroy indentation for Python.
+
+# Local Variables:
+# org-src-preserve-indentation: t
+# End:
