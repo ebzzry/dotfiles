@@ -1,0 +1,76 @@
+# Local IspellDict: en
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2019 Jens Lechtenbörger
+
+#+OPTIONS: toc:nil reveal_width:1280 reveal_height:960
+#+REVEAL_THEME: black
+#+REVEAL_PLUGINS: (multiplex notes search zoom)
+
+# The following ID and SECRET are real.  Do not use them unless you
+# like others to mess with your presentation.
+#+REVEAL_MULTIPLEX_ID: 768546279c1de63f
+#+REVEAL_MULTIPLEX_SECRET: 15664574924923436538
+
+#+Title: Multiplexing
+#+Author: Jens Lechtenbörger
+
+* What is this?
+  - [[https://github.com/hakimel/reveal.js#multiplexing][Multiplexing]]
+    means that your audience views your presentation on their devices
+    - State of your presentation mirrored on their devices
+  - Three ingredients
+    1. You control the /master/ presentation
+    2. Publicly accessible URL for /client/ presentations
+    3. Publicly accessible socket.io server to distribute master events to clients
+
+* Instructions
+** Basic setup
+   #+ATTR_REVEAL: :frag (appear)
+   - Please follow instructions in
+     [[https://github.com/hakimel/reveal.js#multiplexing][README of reveal.js]]
+   - Obtain your own socketID and secret and use them as in header of
+     this presentation
+   - Point audience to URL of client presentation
+     - Replace ~.html~ to obtain client URL: ~_client.html~
+       - Maybe generate with ~org-re-reveal-publish-to-reveal-client~
+         (see [[*GitLab CI for client presentation][GitLab CI for client presentation]]
+         below)
+       - (Or export with ~C-c C-e v v~ as usual, which generates
+         client and master presentations)
+
+** Presentation in Git?
+   - Obviously, you should not publish the master presentation
+     containing the secret
+     - Otherwise, your audience might use the master URL and mess with
+       your presentation
+     - My approach
+       - Use separate file, say ~private/secret.org~
+         - Add ~private~ to ~.gitignore~
+         - Add ~#+REVEAL_MULTIPLEX_SECRET:
+           0815...~ to file ~private/secret.org~
+         - In presentation, replace ~#+REVEAL_MULTIPLEX_SECRET:
+           0815...~ with ~#+INCLUDE: "private/secret.org"~
+
+*** GitLab CI for client presentation
+    - Publish presentations with
+      [[https://gitlab.com/oer/emacs-reveal][emacs-reveal]]
+      as GitLab Pages
+      - In ~.gitlab-ci.yml~ create bogus secret in ~before_script~:
+
+        - ~mkdir private~
+        - ~"echo '#+REVEAL_MULTIPLEX_SECRET: 42' > private/secret.org"~
+          - Note quotation marks above
+      - Use ~org-re-reveal-publish-to-reveal-client~ to publish client
+        presentation
+        - See
+          [[https://gitlab.com/oer/org-re-reveal/blob/master/.gitlab-ci.yml][.gitlab-ci.yml]]
+          that generates this presentation
+        - Or alternative [[https://gitlab.com/lechten/talks-2019b/blob/master/.gitlab-ci.yml][.gitlab-ci.yml]]
+
+*** Local master presentation
+    - Generate master presentation locally
+      - Present with Firefox from local file system
+        - This works with multiplexing and speaker notes
+          - (May need to set ~security.fileuri.strict_origin_policy~ to
+            ~false~ if local fonts are refused; use separate profile then)
+          - Without ~node~ installation mentioned in README of reveal.js

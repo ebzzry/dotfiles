@@ -1,0 +1,16 @@
+This project is a collection (in the form of Git submodules) of free
+and open source software:
+
+- Released under GPL-3.0-or-later
+  - reveal.js-jump-plugin
+  - Reveal.js-TOC-Progress
+  - klipse code under klipse-libs, except for
+    - codemirror under codemirror.license
+    - skulpt-dist under skulpt-dist.license
+- Released under MIT license
+  - multiplex
+  - reveal.js
+  - reveal-a11y
+  - reveal.js-coursemod
+  - reveal.js-plugins
+  - reveal.js-quiz

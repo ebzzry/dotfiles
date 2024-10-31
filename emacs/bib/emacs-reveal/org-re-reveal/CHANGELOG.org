@@ -1,0 +1,450 @@
+# Local IspellDict: en
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2019-2022 Jens Lechtenbörger
+
+* Changelog
+This changelog documents the evolution of org-re-reveal starting with
+version [[*\[1.1.11\] - 2019-08-19][1.1.11]], created on 2019-08-19,
+based on [[https://keepachangelog.com/en/1.0.0/][Keep a Changelog]].
+Version numbers starting with version 2.0.0 adhere to
+[[https://semver.org/spec/v2.0.0.html][Semantic Versioning]].
+
+Older changes are summarized in subsequent sections.
+
+** [Unreleased]
+
+** [3.13.0] - 2022-04-02
+*** Added
+    - Variable ~org-re-reveal-mobile-app~ with option
+      ~reveal_mobile_app~
+
+** [3.12.5] - 2022-03-15
+*** Fixed
+    - Do not place slide footer inside slide container, see re-opened
+      issue #69
+
+** [3.12.4] - 2021-10-25
+*** Fixed
+    - For single file export, test whether link is an inline image;
+      fixes issue #78
+
+** [3.12.3] - 2021-10-21
+*** Fixed
+    - Remove file URI prefixes for builtin plugins, addresses issue #74
+
+** [3.12.2] - 2021-10-20
+*** Fixed
+    - Make version guessing more reliable, addresses issue #75
+
+** [3.12.1] - 2021-10-08
+*** Fixed
+    - Embed built-in plugins with reveal.js 4.x, addresses issue #73
+
+** [3.12.0] - 2021-10-05
+*** Changed
+    - Extend ~org-re-reveal-toc-slide-title~ and its handling to
+      enable default translation by Org mode if user does not
+      explicitly specify a value.
+
+** [3.11.0] - 2021-10-04
+*** Added
+    - Keyword ~REVEAL_SLIDE_CONTAINER~ with variable
+      ~org-re-reveal-slide-container~, addresses issue #69
+
+** [3.10.0] - 2021-08-11
+*** Added
+    - Option ~reveal_embed_local_resources~  with variable
+      ~org-re-reveal-embed-local-resources~, addresses issue #66
+
+** [3.9.0] - 2021-05-07
+*** Added
+    - Keyword ~REVEAL_POSTSCRIPT~  with variable
+      ~org-re-reveal-postscript~, addresses issue #65
+
+** [3.8.1] - 2021-04-05
+*** Fixed
+    - Replace some nil options with t to allow new values, e.g, for
+      ~org-re-reveal-extra-scripts~
+
+** [3.8.0] - 2021-04-05
+*** Added
+    - Support ~totalTime~ option of reveal.js with
+      ~org-re-reveal-totaltime~ and ~REVEAL_TOTALTIME~.
+    - Point users to customization by aborting in case of remote
+      reveal.js location in combination with version guessing.
+*** Fixed
+    - Allow numbers in ~org-re-reveal--if-format~.
+
+** [3.7.0] - 2021-01-18
+*** Added
+    - Allow to specify full paths for custom themes with
+      ~REVEAL_THEME~ and ~org-re-reveal-theme~, with test case.  See
+      MR !32.
+
+** [3.6.0] - 2021-01-11
+*** Added
+    - File specifications for plugins can now be remote URLs in
+      ~org-re-reveal-plugin-config~ and in ~REVEAL_ADD_PLUGIN~
+
+** [3.5.0] - 2020-12-31
+*** Added
+    - Define footers per slide with property ~REVEAL_SLIDE_FOOTER~
+*** Fixed
+    - Issue #41
+
+** [3.4.3] - 2020-11-14
+*** Fixed
+    - Issue #55
+
+** [3.4.2] - 2020-10-18
+*** Fixed
+    - Revert to version 3.4.0.  Defer only worked locally, not remotely.
+
+** [3.4.1] - 2020-10-18
+*** Fixed
+    - Add ~defer~ attribute in ~org-re-reveal--klipsify-script~ to
+      enable klipse only after page has been loaded
+
+** [3.4.0] - 2020-10-14
+*** Added
+    - Keyword ~REVEAL_ADD_PLUGIN~ to activate external plugins
+
+** [3.3.0] - 2020-10-01
+*** Added
+    - Variable ~org-re-reveal-title-slide-notes~ to support speaker
+      notes on title slide
+    - Variable ~org-re-reveal-notes-format-string~ to make previously
+      hard-coded string customizable
+
+** [3.2.2] - 2020-09-22
+*** Fixed
+    - Also set ~org-html-container-element~ to "div" upon publication
+      in ~org-re-reveal-publish-to-reveal~
+      (and not only upon export in ~org-re-reveal-export-to-html~)
+
+** [3.2.1] - 2020-09-19
+*** Fixed
+    - Allow fragment indices and HTML attributes on quote blocks, see
+      [[https://gitlab.com/oer/org-re-reveal/-/merge_requests/30][MR !30]]
+    - Allow classes added via ~:attr_html~ and the classes for
+      fragements defined with ~:attr_reveal~ to be merged correctly.
+      Previously classes for elements added via ~:attr_html~ were added
+      to a separate html class-attribute, which isn’t supported.
+      See [[https://gitlab.com/oer/org-re-reveal/-/merge_requests/31][MR !31]]
+    - Apply new handling of fragments also for source code blocks, closes
+      [[https://gitlab.com/oer/org-re-reveal/-/issues/51][issue #51]]
+
+** [3.2.0] - 2020-09-01
+*** Added
+    - Customizable variable ~org-re-reveal-multiplex-client-ext~
+
+** [3.1.1] - 2020-08-23
+*** Fixed
+    - Point to Readme as documentation
+
+** [3.1.0] - 2020-08-13
+*** Added
+    - Customizable variable ~org-re-reveal-export-notes-to-pdf~ with
+      keyword ~REVEAL_EXPORT_NOTES_TO_PDF~ for export of speaker
+      notes to PDF
+
+** [3.0.5] - 2020-08-13
+*** Fixed
+    - Customization of org-re-reveal-title-slide and
+      org-re-reveal-highlight-css works now
+
+** [3.0.4] - 2020-07-24
+*** Fixed
+    - Allow empty strings in list keywords
+
+** [3.0.3] - 2020-07-23
+*** Fixed
+    - Turn ~org-re-reveal-root~ from choice to string, remove outdated
+      online CDN location
+
+** [3.0.2] - 2020-07-05
+*** Fixed
+    - Rename internal function (duplicate definition)
+
+** [3.0.1] - 2020-07-01
+*** Fixed
+    - Do not combine direction classes for link and its parent
+
+** [3.0.0] - 2020-06-27
+*** Added
+    - Support for reveal.js 4.x
+    - Customizable variable ~org-re-reveal-revealjs-version~ with
+      keyword ~REVEAL_VERSION~ for compatibility with reveal.js 4.x
+*** Changed
+    - ~org-re-reveal-highlight-css~ allows to select among symbols
+*** Removed
+    - ~org-re-reveal-extra-js~
+    - ~org-re-reveal-script-files~
+      (use ~org-re-reveal-revealjs-version~ instead)
+
+** [2.12.2] - 2020-05-12
+*** Fixed
+    - Generate head preamble before MathJax script tags, allowing
+      configuration of MathJax in preamble.  Addresses issue #42.
+
+** [2.12.1] - 2020-02-06
+*** Fixed
+    - Better error messages to notify users of mis-configurations
+      - Attempted single file export with remote reveal.js location
+      - Use of head.min.js when it is not available
+
+** [2.12.0] - 2019-10-20
+*** Added
+    - Optional parameter backend in ~org-re-reveal-publish-to-reveal~
+      and ~org-re-reveal-publish-to-reveal-client~.
+    - Variable ~org-re-reveal-client-multiplex-filter~ allows to
+      suppress publication of multiplex client files based on filename.
+
+** [2.11.2] - 2019-10-15
+*** Fixed
+    - In ~org-re-reveal--add-class~ add class only to first headline.
+
+** [2.11.1] - 2019-10-12
+*** Fixed
+    - Add missing expect files for CI pipeline.
+
+** [2.11.0] - 2019-10-12
+*** Added
+    - Keyword REVEAL_TOC to insert table of contents at position of
+      choice.
+*** Changed
+    - Keyword TOC recommends to switch to new keyword.
+
+** [2.10.0] - 2019-10-11
+*** Changed
+    - Variable ~org-re-reveal-extra-scripts~ can now also contain
+      entire script elements.
+
+** [2.9.0] - 2019-10-10
+*** Added
+    - Variable ~org-re-reveal-extra-scripts~ with keyword
+      ~REVEAL_EXTRA_SCRIPTS~, keyword ~REVEAL_SCRIPT_FILES~
+*** Changed
+    - Make ~org-re-reveal-extra-js~ obsolete (in favor of
+      ~org-re-reveal-extra-scripts~).
+
+** [2.8.1] - 2019-10-10
+*** Fixed
+    - Change default for ~org-re-reveal-theme~ to ~black~
+      - Previous default, ~moon~, loads remote fonts
+        - Not privacy friendly
+        - Not available offline
+
+** [2.8.0] - 2019-10-05
+*** Added
+    - Keyword ~REVEAL_HIGHLIGHT_URL~ and variable ~org-re-reveal-highlight-url~
+      (workaround for issue #27)
+*** Fixed
+    - Copy and paste error related to audio on fragmented lists in
+      ~org-re-reveal-append-frag~
+
+** [2.7.0] - 2019-09-29
+*** Added
+    - Keyword ~REVEAL_KLIPSE_SETUP~ for variable ~org-re-reveal-klipse-setup~
+
+** [2.6.1] - 2019-09-28
+*** Fixed
+    - Fixed configuration if keywords are not present
+
+** [2.6.0] - 2019-09-28
+*** Added
+    - Keywords ~REVEAL_KLIPSE_JS_URL~ and ~REVEAL_KLIPSE_CSS_URL~ for
+      variables ~org-re-reveal-klipse-js~ and
+      ~org-re-reveal-klipse-css~
+
+** [2.5.1] - 2019-09-14
+*** Fixed
+    - Treat empty configuration strings as absent
+      - E.g., do not produce invalid HTML if REVEAL_EXTRA_OPTIONS is
+        the empty string (which it should not be in the first place)
+
+** [2.5.0] - 2019-09-12
+*** Added
+    - New keywords and escape sequences to show QR code and URL on
+      title slide; documented at
+      [[file:org-re-reveal.el::(defcustom%20org-re-reveal-title-slide]]
+
+** [2.4.1] - 2019-09-12
+*** Fixed
+    - Do not generate empty CSS file names
+    - Do not include CSS files multiple times
+
+** [2.4.0] - 2019-09-07
+*** Added
+    - Optional argument ~backend~ in
+      [[file:org-re-reveal.el::(defun%20org-re-reveal-export-to-html][org-re-reveal-export-to-html]]
+      for exports with derived backends
+
+** [2.3.0] - 2019-09-04
+*** Added
+    - Variable [[file:org-re-reveal.el::(defcustom%20org-re-reveal-subtree-with-title-slide][org-re-reveal-subtree-with-title-slide]]
+      with option ~reveal_subtree_with_title_slide~ to include title
+      slides upon subtree exports
+
+** [2.2.0] - 2019-09-04
+*** Added
+    - A subheading for a slide can be created with the new property
+      ~NOSLIDE~ on the subheading, see file:test-cases/test-noslide.org
+
+** [2.1.0] - 2019-08-23
+*** Added
+    - Job ~pages~ in file:.gitlab-ci.yml
+      to publish Readme and test cases as reveal.js presentations
+      at https://oer.gitlab.io/org-re-reveal/
+      - File file:test-cases/publish.el
+      - File file:index.org
+    - Function [[file:org-re-reveal.el::(defun%20org-re-reveal-publish-to-reveal-client][org-re-reveal-publish-to-reveal-client]]
+    - Test file:test-cases/test-multiplex.org
+*** Changed
+    - Set [[file:org-re-reveal.el::(defcustom%20org-re-reveal-multiplex-url][org-re-reveal-multiplex-url]]
+      and [[file:org-re-reveal.el::(defcustom%20org-re-reveal-multiplex-socketio-url][org-re-reveal-multiplex-socketio-url]]
+      to working default values
+    - Switch to Docker image ~emacs-reveal~ in file:./.gitlab-ci.yml
+*** Fixed
+    - Replace ~caddr~ (and ~cadr~) with ~nth~; ~caddr~ is provided by
+      ~cl~, which was only implicitly required by ~htmlize~
+
+** [2.0.1] - 2019-08-21
+*** Fixed
+    - Adjust
+      [[file:org-re-reveal.el::(defcustom%20org-re-reveal-klipse-extra-css%20"<style>][org-re-reveal-klipse-extra-css]]
+      for compatibility with oer-reveal CSS settings
+
+** [2.0.0] - 2019-08-21
+   - In view of Semantic Versioning, version 1.1.11 should have been
+     called 2.0.0.  The only difference between the two versions is
+     the changed version string “2.0.0” in the
+     [[file:org-re-reveal.el::;;%20Version:][header section of org-re-reveal.el]].
+** [1.1.11] - 2019-08-19
+   - Rewrite klipse support for SQL support, addressing [[https://gitlab.com/oer/org-re-reveal/issues/23][issue #23]]
+     - Instead of iframes, ordinary HTML elements are used now
+       - Now, state can be shared between slides, e.g., for SQL
+       - Now, scaling must be disabled for reveal.js with klipse
+         functionality
+*** Added
+    - Examples in file:Readme.org and file:test-cases/test-klipsify.org
+      for new klipse support
+    - New option [[file:org-re-reveal.el::(:reveal-klipsify-src][reveal_klipsify_src]]
+    - New keywords with variables
+      - [[file:org-re-reveal.el::(:reveal-codemirror-config%20][REVEAL_CODEMIRROR_CONFIG]]
+        with [[file:org-re-reveal.el::(defcustom%20org-re-reveal-klipse-codemirror%20nil][org-re-reveal-klipse-codemirror]]
+      - [[file:org-re-reveal.el::(:reveal-klipse-extra-config%20][REVEAL_KLIPSE_EXTRA_CONFIG]]
+        with [[file:org-re-reveal.el::(defcustom%20org-re-reveal-klipse-extra-config%20nil][org-re-reveal-klipse-extra-config]]
+    - New variables
+      - [[file:org-re-reveal.el::(defcustom%20org-re-reveal-no-htmlize-src%20nil][org-re-reveal-no-htmlize-src]]
+        for new third option for syntax highlighting with activation
+        per source code block
+      - [[file:org-re-reveal.el::(defcustom%20org-re-reveal-klipse-extra-css%20][org-re-reveal-klipse-extra-css]]
+        for compatibility between reveal.js and klipse
+*** Changed
+    - Variable [[file:org-re-reveal.el::(defcustom%20org-re-reveal-plugins][org-re-reveal-plugins]]
+      with new default value, the customization interface marks
+      removed plugins as such
+    - Variable [[file:org-re-reveal.el::(defcustom%20org-re-reveal-klipse-js][org-re-reveal-klipse-js]]
+      points to non-minified version in view of
+      https://github.com/viebel/klipse/issues/334
+    - Variable [[file:org-re-reveal.el::(defcustom%20org-re-reveal-klipse-setup][org-re-reveal-klipse-setup]]
+      is now a list of triples
+*** Removed
+    - Variables ~org-re-reveal-klipse-height~ and
+      ~org-re-reveal-klipse-width~ removed; width and height of code
+      blocks are no longer configurable per code block
+
+
+* Documentation of user-facing changes of versions 1.0.0 (2019-02-13) until 2.0.0 (2019-08-21)
+- Version 1.0.0
+  - Improved documentation
+  - New export key binding (~C-c C-e v v~), customizable via
+    ~org-re-reveal-keys~
+- Version 1.0.1
+  - Fix and document changes for speaker notes template with
+    Org version 9.2 and later
+    - That version needs ~org-tempo~, templates are lower-case
+- Version 1.0.2
+  - Allow to enable Klipse per source code block with configurable
+    width and height
+- Version 1.0.3
+  - New customizable variable ~org-re-reveal-body-attrs~
+- Version 1.0.4
+  - Update of MathJax URL
+- Version 1.1.0
+  - Improved customization interfaces for slide transitions, CSS
+    themes, and reveal.js URL
+  - Bugs related to multiplexing, highlight.js, and slide splitting
+    fixed
+- Version 1.1.1
+  - New customizable option ~org-re-reveal-generate-custom-ids~ for
+    (more) stable slide URLs
+- Version 1.1.2
+  - New choice ~draft~ for ~org-re-reveal-generate-custom-ids~,
+    which can now also be set as option ~reveal_generate_ids~
+- Version 1.1.3
+  - ~org-re-reveal-generate-custom-ids~ reverted to Boolean;
+    option ~draft~ not necessary any longer
+  - Slide splitting fixed; background options remain in
+    effect for parts
+- Version 1.1.4
+  - Move list of user-facing changes from Readme.org to new file CHANGELOG
+  - Let-bind variable ~org-html-container-element~ to its expected
+    default value "div" upon export (enables different default value
+    elsewhere, see issue #13)
+  - Also allow string values (percentages) for ~org-re-reveal-width~
+    and ~org-re-reveal-height~, suggested in issue #13
+- Version 1.1.5
+  - Support for option hashOneBasedIndex of reveal.js, MR !22
+  - Do not create title slide for empty string, fix documentation for
+    avoidance of title slide in Readme.org, addresses issue #17
+- Version 1.1.6
+  - Fix issue #22
+- Version 1.1.7
+  - New customizable variable ~org-re-reveal-extra-attr~, MR !24
+    - Add extra attributes for all slides
+- Version 1.1.8
+  - New customizable variable ~org-re-reveal-extra-options~
+    - Address issue #16
+- Version 1.1.9
+  - New customizable variable ~org-re-reveal-klipse-setup~
+    - Address issue #23
+- Version 1.1.10
+  - Remove SQL from ~org-re-reveal-klipse-setup~
+
+* Initial differences of fork org-reveal from upstream (until Feb 2019)
+In roughly chronological order
+- (Next to code changes for lexical binding and to avoid warnings by
+  checkdoc, package lint, byte compiler)
+- Variables org-re-reveal-title-slide and
+  org-re-reveal-external-plugins can be filenames (to maintain
+  non-trivial code separately)
+- Allow to add data-state to title and TOC slide, class to TOC slide
+- Allow audio to be played with fragments (with audio-slideshow plugin)
+- Allow custom title and location for TOC (new options
+  reveal-toc-slide-state, reveal-toc-slide-class, reveal-toc-slide-title)
+- Enable links to slides of other presentations (with new option
+  reveal-inter-presentation-links)
+- More reveal.js options: mouseWheel, defaultTiming, fragmentInURL,
+  pdfSeparateFragments
+- Allow frag-index on source blocks
+- Improve timing of presentations (org-re-reveal-defaulttiming,
+  reveal-title-slide-timing)
+- New function org-re-reveal-format-spec
+- New options reveal-toc-footer, reveal-title-slide-state
+- New customizable variable org-re-reveal-slide-footer-html
+- Add customizable variable org-re-reveal-script-files (avoid loading
+  of head.min.js in versions of reveal.js where it does not exist)
+- Allow to add class attribute to headline
+- Add class attributes (backwardlink, forwardlink) to internal links
+- Improve klipse support (add variable org-re-reveal-klipse-languages,
+  fix PHP support)
+
+# Remember
+# - Change types: Added, Changed, Deprecated, Removed, Fixed, Security
+# - Versions: Major.Minor.Patch
+#   - Major for incompatible changes
+#   - Minor for backwards compatible changes
+#   - Patch for backwards compatible bug fixes
+# - Might use Ma.Mi.P-alpha < Ma.Mi.P-alpha.1 < Ma.Mi.P-beta

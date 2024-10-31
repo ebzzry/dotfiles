@@ -1,0 +1,44 @@
+reveal.coursemod__presentation {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.coursemod__presentation--coursemod-active {
+    width: 66.66%;
+}
+
+/*
+    make sure the controls and everything else stays inside the presentation view
+*/
+.reveal.coursemod__presentation .controls,
+.reveal.coursemod__presentation .audio-controls,
+.reveal.coursemod__presentation .recorder,
+.reveal.coursemod__presentation .slide-number {
+    position: absolute !important;
+}
+
+.coursemod__course-view {
+    background-color: #f0f0f0;
+    border-left: 2px solid lightgray;
+    box-sizing: border-box;
+    display: none;
+    font-family: "Helvetica", sans-serif;
+    font-size: 1em;
+    height: 100%;
+    line-height: 1.3em;
+    overflow-y: scroll;
+    padding: 0 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 33%;
+}
+
+.coursemod__presentation.coursemod--active {
+    width: 66.66%;
+}
+
+.coursemod__course-view.coursemod--active {
+    display: inline-block;
+}
