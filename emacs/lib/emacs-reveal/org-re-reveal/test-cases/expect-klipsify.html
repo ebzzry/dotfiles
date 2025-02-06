@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Test klipsify</title>
+<meta name="author" content="Jens Lechtenbörger"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme"/>
+<link rel="stylesheet" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"/>
+<style>
+/* Position computations of klipse get confused by reveal.js's scaling.
+   Hence, scaling should be disabled with this code.  Fix height of code area
+   with scrollbar (use overflow instead of overflow-y to restore CodeMirror
+   setting afterwards): */
+.reveal section pre { max-height: 70vh; height: auto; overflow: auto; }
+/* Reset some reveal.js and oer-reveal settings: */
+.reveal section pre .CodeMirror pre { font-size: 2em; box-shadow: none; width: auto; padding: 0.4em; display: block; overflow: visible; }
+/* Enlarge cursor: */
+.CodeMirror-cursor { border-left: 3px solid black; }
+</style>
+<script>
+    window.klipse_settings = {
+codemirror_options_in: {
+lineNumbers: true,
+autoCloseBrackets: true
+},
+        selector: '.language-klipse',
+        selector_eval_html: '.language-klipse-html',
+        selector_eval_js: '.language-klipse-javascript',
+        selector_eval_js: '.language-klipse-js',
+        selector_eval_php: '.language-klipse-php',
+        selector_eval_python_client: '.language-klipse-python',
+        selector_eval_ruby: '.language-klipse-ruby',
+        selector_eval_scheme: '.language-klipse-scheme',
+        selector_sql: '.language-klipse-sql'
+    };
+</script>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1 class="title">Test klipsify</h1><h2 class="author">Jens Lechtenbörger</h2><p class="date">Created:{{date}}</p>
+</section>
+<section id="table-of-contents-section">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-1">1. Different languages</a>
+<ul>
+<li><a href="#/slide-1-1">1.1. HTML and CSS</a></li>
+<li><a href="#/slide-1-2">1.2. JavaScript</a></li>
+<li><a href="#/slide-1-3">1.3. Python</a></li>
+<li><a href="#/slide-1-4">1.4. Clojure</a></li>
+</ul>
+</li>
+<li><a href="#/slide-2">2. SQL as example of state across slides</a>
+<ul>
+<li><a href="#/slide-2-1">2.1. SQL, Populate Database</a></li>
+<li><a href="#/slide-2-2">2.2. SQL, Query 1</a></li>
+<li><a href="#/slide-2-3">2.3. SQL, Query 2</a></li>
+</ul>
+</li>
+<li><a href="#/slide-3">3. An exception, no klipse here</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section>
+<section id="slide-1">
+<h2 id="1"><span class="section-number-2">1.</span> Different languages</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+</section>
+<section id="slide-1-1">
+<h3 id="1-1"><span class="section-number-3">1.1.</span> HTML and CSS</h3>
+<pre><code class="language-klipse-html" roll-in>
+&lt;style&gt;
+h1.demo-headline { color: blue; }
+p.demo-para { color: green; }
+#demo-id { color: yellow; }
+&lt;/style&gt;
+&lt;h1 class="demo-headline"&gt;Hello World!&lt;/h1&gt;
+&lt;p class="demo-para"&gt;This is a paragraph of text with class “demo-para”.&lt;/p&gt;
+&lt;p id="demo-id"&gt;This is another paragraph with id “demo-id”.&lt;/p&gt;
+</code></pre>
+
+</section>
+<section id="slide-1-2">
+<h3 id="1-2"><span class="section-number-3">1.2.</span> JavaScript</h3>
+<pre><code class="language-klipse-js" >
+console.log(<span style="font-style: italic;">"success"</span>);
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">x</span>=<span style="font-style: italic;">&#39;string using single quote&#39;</span>;
+x
+</code></pre>
+
+</section>
+<section id="slide-1-3">
+<h3 id="1-3"><span class="section-number-3">1.3.</span> Python</h3>
+<pre><code class="language-klipse-python" >
+<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">factorial</span>(n):
+    <span style="font-weight: bold;">if</span> n &lt; 2:
+        <span style="font-weight: bold;">return</span> 1
+    <span style="font-weight: bold;">else</span>:
+        <span style="font-weight: bold;">return</span> n * factorial(n - 1)
+
+<span style="font-weight: bold;">print</span>(factorial(10))
+</code></pre>
+
+</section>
+<section id="slide-1-4">
+<h3 id="1-4"><span class="section-number-3">1.4.</span> Clojure</h3>
+<pre><code class="language-klipse" >
+(defn greet [person]
+  (str "Hello " person))
+(map greet ["Alice" "Bob" "Carol"])
+</code></pre>
+
+</section>
+</section>
+<section>
+<section id="slide-2">
+<h2 id="2"><span class="section-number-2">2.</span> SQL as example of state across slides</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+</section>
+<section id="slide-2-1">
+<h3 id="2-1"><span class="section-number-3">2.1.</span> SQL, Populate Database</h3>
+<pre><code class="language-klipse-sql" >
+<span style="font-weight: bold;">CREATE</span> <span style="font-weight: bold;">TABLE</span> <span style="font-weight: bold;">Software</span> (<span style="font-weight: bold;">Name</span>, License, Rating);
+<span style="font-weight: bold;">INSERT</span> <span style="font-weight: bold;">INTO</span> Software <span style="font-weight: bold;">VALUES</span>
+   ("GNU Emacs", "GPLv3", 5),
+   ("GNU/Linux", "FLOSS", 5),
+   ("Powerpoint", "Proprietary", 3);
+</code></pre>
+
+</section>
+<section id="slide-2-2">
+<h3 id="2-2"><span class="section-number-3">2.2.</span> SQL, Query 1</h3>
+<pre><code class="language-klipse-sql" >
+<span style="font-weight: bold;">SELECT</span> * <span style="font-weight: bold;">FROM</span> Software;
+</code></pre>
+
+</section>
+<section id="slide-2-3">
+<h3 id="2-3"><span class="section-number-3">2.3.</span> SQL, Query 2</h3>
+<pre><code class="language-klipse-sql" >
+<span style="font-weight: bold;">SELECT</span> <span style="font-weight: bold;">Name</span> <span style="font-weight: bold;">FROM</span> Software <span style="font-weight: bold;">WHERE</span> Rating = 5;
+</code></pre>
+
+
+</section>
+</section>
+<section>
+<section id="slide-3">
+<h2 id="3"><span class="section-number-2">3.</span> An exception, no klipse here</h2>
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="font-weight: bold;">def</span> <span style="font-weight: bold;">factorial</span>(n):
+    <span style="font-weight: bold;">if</span> n &lt; 2:
+        <span style="font-weight: bold;">return</span> 1
+    <span style="font-weight: bold;">else</span>:
+        <span style="font-weight: bold;">return</span> n * factorial(n - 1)
+
+<span style="font-weight: bold;">print</span>(factorial(10))
+</pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+width: 1400,
+height: 1000,
+minScale: 1.00,
+maxScale: 1.00,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'convex', // see README of reveal.js for options
+transitionSpeed: 'default',
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+</script>
+<script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+<script>
+/* Recompute layout upon changes by klipse.  Code fragment from
+   asciidoctor-revealjs-klipse by Timothy Pratley under GPLv3:
+   https://github.com/timothypratley/asciidoctor-revealjs-klipse/blob/master/docs/docinfo-footer.html */
+Reveal.addEventListener( 'slidechanged', function( event ) {
+    window.dispatchEvent( new Event('resize') );
+} );
+</script>
+</body>
+</html>

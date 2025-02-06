@@ -1,0 +1,53 @@
+# Local IspellDict: en
+#+STARTUP: showeverything
+#+SPDX-FileCopyrightText: 2020 Jens Lechtenbörger <https://lechten.gitlab.io/#me>
+#+SPDX-License-Identifier: CC-BY-SA-4.0
+
+# Apply standard settings of oer-reveal.
+#+INCLUDE: "~/.emacs.d/oer-reveal-org/config.org"
+
+#+TITLE: Test presentation for emacs-reveal
+#+AUTHOR: Jens Lechtenbörger
+
+* Usage
+  :PROPERTIES:
+  :CUSTOM_ID: usage
+  :END:
+  See [[https://oer.gitlab.io/hints.html][usage hints for emacs-reveal presentations]]
+
+* Main Part
+** A slide with navigation into all directions
+   :PROPERTIES:
+   :CUSTOM_ID: navigation
+   :END:
+   - a list
+   - with bullet
+   - points
+
+** A slide with speaker notes
+   :PROPERTIES:
+   :CUSTOM_ID: notes
+   :END:
+   Please open speaker notes or courseware view
+   #+begin_notes
+   This text is usually hidden.  Can serve two purposes:
+   1. Speaker notes, to help the speaker keep on track
+   2. Course notes, to help students understand slide
+   #+end_notes
+
+** A quiz
+   :PROPERTIES:
+   :CUSTOM_ID: quiz
+   :END:
+#+REVEAL_HTML: <script data-quiz src="./quizzes/sample-quiz.js"></script>
+
+** Use of colors
+   :PROPERTIES:
+   :CUSTOM_ID: colors
+   :END:
+   This is [[color:red][red]].
+
+* The End is near
+
+#+MACRO: licensepreamble
+#+INCLUDE: "~/.emacs.d/oer-reveal-org/license-template.org" :minlevel 2

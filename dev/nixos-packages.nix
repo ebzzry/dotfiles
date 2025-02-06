@@ -1,0 +1,34 @@
+{ pkgs, ... }:
+with pkgs; [
+  apacheHttpd
+  appimage-run
+  bluez
+  dmidecode
+  exfat
+  keepassxc
+  libmtp
+  libsForQt5.qt5ct
+  lsof
+  lynx
+  mediainfo
+  pamixer
+  pciutils
+  pmutils
+  pulsemixer
+  s3cmd
+  smartmontools
+  usbutils
+  xclip
+  xdg-user-dirs
+  xdotool
+  xorg.xbacklight
+  xorg.xcursorthemes
+  xorg.xdpyinfo
+  xorg.xev
+  xorg.xhost
+  xorg.xinput
+  xorg.xmodmap
+  xorg.xprop
+  zathura
+  zsnes
+]

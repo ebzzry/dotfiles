@@ -1,0 +1,45 @@
+# Local IspellDict: en
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2021 Jens Lechtenbörger
+
+* Changelog
+This file is based on
+[[https://keepachangelog.com/en/1.0.0/][Keep a Changelog]],
+where version numbers starting with version 1.0.0 adhere to
+[[https://semver.org/spec/v2.0.0.html][Semantic Versioning]].
+
+** [Unreleased]
+
+** [2.0.1] - 2021-10-24
+*** Fixed
+- Improve documentation after MELPA inclusion, no change in functionality
+
+** [2.0.0] - 2021-10-18
+*** Removed
+- As suggested on [[https://github.com/melpa/melpa/pull/7751][MELPA]],
+  do not modify ~org-export-filter-paragraph-functions~ but leave that
+  to users
+
+** [1.1.1] - 2021-10-17
+*** Fixed
+- Return nil from unload function
+
+** [1.1.0] - 2021-10-11
+*** Added
+- Unload function
+
+** [1.0.1] - 2021-10-09
+*** Fixed
+- Add missing quotation mark
+
+** [1.0.0] - 2021-10-09
+*** Fixed
+- Require ~oc-csl~ for proper initialization
+
+# Remember
+# - Change types: Added, Changed, Deprecated, Removed, Fixed, Security
+# - Versions: Major.Minor.Patch
+#   - Major for incompatible changes
+#   - Minor for backwards compatible changes
+#   - Patch for backwards compatible bug fixes
+# - Might use Ma.Mi.P-alpha < Ma.Mi.P-alpha.1 < Ma.Mi.P-beta
