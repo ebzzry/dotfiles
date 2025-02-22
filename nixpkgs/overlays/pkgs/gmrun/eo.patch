@@ -1,0 +1,22 @@
+diff --git a/src/main.cc b/src/main.cc
+index dc4b034..4c466ad 100644
+--- a/src/main.cc
++++ b/src/main.cc
+@@ -317,7 +317,7 @@ on_compline_runwithterm(GtkCompletionLine *cl, struct gigi* g)
+ static gint
+ search_off_timeout(struct gigi *g)
+ {
+-  gtk_label_set_text(GTK_LABEL(g->w1), "Run program:");
++  gtk_label_set_text(GTK_LABEL(g->w1), "Programon plenumu:");
+   gtk_widget_set_style(g->w1, style_normal(g->w1));
+   gtk_widget_hide(g->w2);
+   return FALSE;
+@@ -554,7 +554,7 @@ int main(int argc, char **argv)
+   gtk_widget_show(hhbox);
+   gtk_box_pack_start(GTK_BOX(hbox), hhbox, FALSE, FALSE, 0);
+ 
+-  GtkWidget *label = gtk_label_new("Run program:");
++  GtkWidget *label = gtk_label_new("Programon plenumu:");
+   gtk_widget_show(label);
+   gtk_misc_set_alignment(GTK_MISC(label), 0.0, 1.0);
+   gtk_misc_set_padding(GTK_MISC(label), 10, 0);
