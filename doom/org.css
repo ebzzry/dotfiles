@@ -1,0 +1,44 @@
+html {
+    color: #333;
+    font-size: 1em;
+    font-family: Georgia, Cambria, Palatino, 'Palatino Linotype', 'Times New Roman', Times, serif;
+    line-height: 1.45;
+    text-align: left: width: 100%;
+    /* max-width: 40em; */
+    max-width: 100%;
+    margin: 0 auto 0 auto;
+    padding: 0;
+}
+
+body {
+    border-top: hidden;
+    border-bottom: hidden;
+    padding: 0 1.5em 1em 1.5em;
+    margin: 0;
+}
+
+table {
+    margin: 0.5em;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid lightgray;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.45em;
+    padding-right: 0.45em;
+}
+
+#content {
+    max-width: 80%;
+    margin: auto;
+}
+
+table tr:nth-child(odd) td{
+    background-color: #E5E4E2;
+}
+table tr:nth-child(even) td{
+    background-color: #FFF;
+}
