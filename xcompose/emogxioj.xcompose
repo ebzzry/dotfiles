@@ -1,0 +1,149 @@
+# -*- coding: utf-8 -*-
+
+#---------------------------------------------------------------------------------------------------
+# japanaj emoĝioj http://japaneseemoticons.me/
+#---------------------------------------------------------------------------------------------------
+
+# f : feliĉeco
+# m : malfeliĉeco
+# e : eksciteco
+# a : amo
+# b : brakumoj
+# k : kisoj
+# d : dormo
+# t : triumfo
+# / : flegmo
+# ! : kolero
+# @ : maltrankvilo
+
+## Feliĉeco
+<Multi_key> <f> <1> : "!(∩_∩)!"
+<Multi_key> <f> <2> : "(/^▽^)/"
+<Multi_key> <f> <3> : "(｡◝‿◜｡)"
+<Multi_key> <f> <4> : "(☆^ー^☆)"
+<Multi_key> <f> <5> : "(◍•ᴗ•◍)"
+<Multi_key> <f> <6> : "ᕕ( ᐛ )ᕗ"
+<Multi_key> <f> <7> : " ( ♥ •ᴗ• ♥ )"
+<Multi_key> <f> <8> : "(๑^ں^๑)"
+<Multi_key> <f> <9> : "(๑･`◡´･๑)"
+<Multi_key> <f> <0> : "(　◠ ◡ ◠　)"
+
+## Malfeliĉeco
+<Multi_key> <m> <1> : "(◞‸◟；)"
+<Multi_key> <m> <2> : "( T^T)"
+<Multi_key> <m> <3> : "(T＿T)"
+<Multi_key> <m> <4> : "(╥_╥)"
+<Multi_key> <m> <5> : "(━┳━ _ ━┳━)"
+<Multi_key> <m> <6> : "( p_q)"
+<Multi_key> <m> <7> : "( /)u(\ )"
+<Multi_key> <m> <8> : "(๑•́₋•̩̥̀๑)"
+<Multi_key> <m> <9> : "(  ゜ε  ゜ )"
+<Multi_key> <m> <0> : "(⌣_⌣”)"
+
+## Eksciteco
+<Multi_key> <e> <1> : "(((o(*ﾟ▽ﾟ*)o)))"
+<Multi_key> <e> <2> : "o(^▽^)o"
+<Multi_key> <e> <3> : "o(*^▽^*)o"
+<Multi_key> <e> <4> : "o(*>ω<*)o"
+<Multi_key> <e> <5> : "⌒°(ᴖ◡ᴖ)°⌒"
+<Multi_key> <e> <6> : "٩(♡ε♡ )۶"
+<Multi_key> <e> <7> : "(ٛɲ˃ ˑ̣̮ ˂ٛɳ)"
+<Multi_key> <e> <8> : "(ﾉ^ヮ^)ﾉ*:・ﾟ✧"
+<Multi_key> <e> <9> : "ヾ(@^▽^@)ノ"
+<Multi_key> <e> <0> : "╰(✧∇✧)╯"
+
+## Amo
+<Multi_key> <a> <1> : "(｡’▽’｡)♡"
+<Multi_key> <a> <2> : "(∩˃o˂∩)♡"
+<Multi_key> <a> <3> : "(◍•ᴗ•◍)♡ ✧*。"
+<Multi_key> <a> <4> : "( ˊᵕˋ )♡.°⑅"
+<Multi_key> <a> <5> : "♡〜٩( ╹▿╹ )۶〜♡"
+<Multi_key> <a> <6> : "( ˘ ³˘)♥"
+<Multi_key> <a> <7> : "(/^-^(^ ^*)/"
+<Multi_key> <a> <8> : "(ღ˘⌣˘)❛ั◡❛ัღ)"
+<Multi_key> <a> <9> : "(Ɔ ˘⌣˘)♥(˘⌣˘ C)"
+<Multi_key> <a> <0> : "໒( ♥ ◡ ♥ )७"
+
+## Brakumoj
+<Multi_key> <b> <1> : "(> ^_^ )>"
+<Multi_key> <b> <2> : "d=(´▽｀)=b"
+<Multi_key> <b> <3> : "⊂(◉‿◉)つ"
+<Multi_key> <b> <4> : "⊂（♡⌂♡）⊃"
+<Multi_key> <b> <5> : "⊂((・▽・))⊃"
+<Multi_key> <b> <6> : "ლ(´ ❥ `ლ)"
+<Multi_key> <b> <7> : "─=≡Σʕっ•ᴥ•ʔっ"
+<Multi_key> <b> <8> : "───==≡≡ΣΣ(> ^_^ )>"
+<Multi_key> <b> <9> : "(>^_^)><(^o^<)"
+<Multi_key> <b> <0> : "(/^.^(^.^*)>"
+
+## Kisoj
+<Multi_key> <k> <1> : "( ˘ ³˘)"
+<Multi_key> <k> <2> : "（*＾3＾）"
+<Multi_key> <k> <3> : "(๛ ˘ ³˘)۶"
+<Multi_key> <k> <4> : "o┤*｀3´*├o"
+<Multi_key> <k> <5> : "( *¯ ³¯*)♡"
+<Multi_key> <k> <6> : "(~￣³￣)~"
+<Multi_key> <k> <7> : "(づ￣ ³￣)づ"
+<Multi_key> <k> <8> : "(○´3｀)ﾉ"
+<Multi_key> <k> <9> : "(。≖ˇ3ˇ≖｡)"
+<Multi_key> <k> <0> : "(๑♡3♡๑)"
+
+## Dormo
+<Multi_key> <d> <1> : "(-, – )…zzzZZZ"
+<Multi_key> <d> <2> : "(∪｡∪)｡｡｡zzz"
+<Multi_key> <d> <3> : "(。-ω-)zzz"
+<Multi_key> <d> <4> : "(ᴗ˳ᴗ)"
+<Multi_key> <d> <5> : "(- o – ) zzZ"
+<Multi_key> <d> <6> : "(๑ᵕ⌓ᵕ̤)"
+<Multi_key> <d> <7> : "(ᴗ˳ᴗ)"
+<Multi_key> <d> <8> : "(｡し_し｡)"
+<Multi_key> <d> <9> : "(-_-) zzz"
+<Multi_key> <d> <0> : "(ृ ु⁎ᴗᵨᴗ⁎)ु.zZ"
+
+## Triumfoj
+<Multi_key> <t> <1> : "(*•̀ᴗ•́*)و ̑̑"
+<Multi_key> <t> <2> : "(๑•̀ㅂ•́)و"
+<Multi_key> <t> <3> : "◝( ′ㅂ`)و ̑̑"
+<Multi_key> <t> <4> : "(๑˃̵ᴗ˂̵)و"
+<Multi_key> <t> <5> : "!(•̀ᴗ•́)و ̑̑"
+<Multi_key> <t> <6> : "٩(•̤̀ᵕ•̤́๑)ᵒᵏᵎᵎᵎᵎ"
+<Multi_key> <t> <7> : "ೕ(•̀ᴗ•́)"
+<Multi_key> <t> <8> : "٩(ര̀ᴗര́)"
+<Multi_key> <t> <9> : "ೕ(˃̵ᴗ˂̵ ๑)"
+<Multi_key> <t> <0> : "(•́⌄•́๑)૭✧"
+
+## Flegmo
+<Multi_key> <slash> <1> : "¯\\_(ツ)_/¯"
+<Multi_key> <slash> <2> : "¯\\_(⌣̯̀⌣́)_/¯"
+<Multi_key> <slash> <3> : "┐( ˘_˘)┌"
+<Multi_key> <slash> <4> : "¯\\_ȌᴥȌ_/¯"
+<Multi_key> <slash> <5> : "└(・。・)┘"
+<Multi_key> <slash> <6> : "└(°ᴥ°)┘"
+<Multi_key> <slash> <7> : "└╏ ʘ ▾ ʘ ╏┘"
+<Multi_key> <slash> <8> : "└( ՞ ~ ՞ )┘"
+<Multi_key> <slash> <9> : "╮ (. ❛ ᴗ ❛.) ╭"
+<Multi_key> <slash> <0> : "╮(ﾟェﾟ*)╭"
+
+## Kolero
+<Multi_key> <exclam> <1> : "凸(｀0´)凸"
+<Multi_key> <exclam> <2> : "╭∩╮  ಠ  _  ಠ  ╭∩╮"
+<Multi_key> <exclam> <3> : "凸(⚈▿⚈╬)"
+<Multi_key> <exclam> <4> : "凸( ^ ︿ ^ )"
+<Multi_key> <exclam> <5> : "凸(⊙▂⊙ )"
+<Multi_key> <exclam> <6> : "┌П┐(►˛◄’!)"
+<Multi_key> <exclam> <7> : "凸(¬‿¬)"
+<Multi_key> <exclam> <8> : "凸(⊙▂⊙ )"
+<Multi_key> <exclam> <9> : "凸(｀⌒´メ)凸"
+<Multi_key> <exclam> <0> : "(⋋▂⋌)"
+
+## Maltrankvilo
+<Multi_key> <at> <1> : "(๑ʘ∆ʘ๑)"
+<Multi_key> <at> <2> : "(⊙▂⊙)"
+<Multi_key> <at> <3> : "(　ﾟдﾟ)"
+<Multi_key> <at> <4> : "(๏д๏)"
+<Multi_key> <at> <5> : "(๑ó⌓ò๑)"
+<Multi_key> <at> <6> : "( ³⌓³)"
+<Multi_key> <at> <7> : "૮(⊙├┬┴┬┴┬┴┬┴┤⊙)ა"
+<Multi_key> <at> <8> : "(◕⌓◕;)"
+<Multi_key> <at> <9> : "( •᷄⌓•᷅ )"
+<Multi_key> <at> <0> : "╏ ⁰ ⌂ ⁰ ╏"

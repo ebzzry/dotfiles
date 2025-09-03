@@ -1,0 +1,24 @@
+#+title: dotfiles (ebzzry)
+
+This is a collection of my configuration files.
+
+* Primary config
+** [[zsh][zsh]]
+** [[doom][doom]]
+** [[lisp][lisp]]
+** [[nix][nix]]
+** [[tmux][tmux]]
+** [[xmodmap][xmodmap]]
+** [[stumpwm][stumpwm]]
+** [[qutebrowser][qutebrowser]]
+** [[xcompose][xcompose]]
+
+* Secondary config
+** [[emacs][emacs]]
+** [[sioyek][sioyek]]
+** [[vim][vim]]
+** [[bash][bash]]
+** [[iterm2][iterm2]]
+** [[readline][readline]]
+** [[nyxt][nyxt]]
+** [[xmonad][xmonad]]

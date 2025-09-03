@@ -1,0 +1,66 @@
+%———————————————————————————————————————————————————————————————————————————————
+% head
+
+\documentclass[10pt]{letter} % 10pt font size default, 11pt and 12pt are also possible
+
+\usepackage{geometry} % Required for adjusting page dimensions
+
+%\longindentation=0pt % Un-commenting this line will push the closing "Sincerely," to the left of the page
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	top=3cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	left=4.5cm, % Left margin
+	right=4.5cm, % Right margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{microtype} % Improve justification
+
+%———————————————————————————————————————————————————————————————————————————————
+% your name and address
+
+\signature{Rommel Mart\'{i}nez} % Your name for the signature at the bottom
+
+\address{Bauang, La Union 2501} % Your address and phone number
+
+%———————————————————————————————————————————————————————————————————————————————
+% begin
+
+\begin{document}
+
+%———————————————————————————————————————————————————————————————————————————————
+% addressee
+
+\begin{letter}{John Doe \\ Foo Bar, Inc. \\ 321 Pleasant Lane \\ City, State 12345} % Name/title of the addressee
+
+%———————————————————————————————————————————————————————————————————————————————
+% content
+
+\opening{\textbf{Dear Sir or Madam,}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum lacinia odio, quis tincidunt neque suscipit ut. Donec neque nisl, volutpat sed posuere eget, congue et odio. Donec eu neque tortor. Pellentesque lacinia, arcu vitae molestie euismod, lectus est sodales nisi, id vehicula nisl massa vel felis. In hac habitasse platea dictumst. Aliquam dui erat, bibendum et posuere eget, placerat sit amet ipsum. Phasellus congue, est ac cursus tempor, tellus nibh rhoncus arcu, sit amet scelerisque magna turpis nec turpis. Sed lacinia orci ac nunc convallis feugiat. Sed molestie, nisl et scelerisque consequat, elit quam pellentesque sem, eu pharetra mi elit quis libero. Mauris porta urna in orci sagittis fermentum. Aenean nec elit id ligula venenatis ornare. Nam urna neque, aliquet in sollicitudin sed, molestie ut tellus.
+
+Vivamus consectetur, mauris sit amet pharetra pharetra, tortor ante dignissim purus, vitae pellentesque ante lorem eu magna. Morbi at leo leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed feugiat volutpat risus, a ullamcorper magna dictum quis. Nam dictum enim et lectus consectetur consectetur. Vestibulum vitae eros vel elit venenatis ornare ac sed felis. Nunc et laoreet libero. Cras ut fermentum dui.
+
+Thank you for your time and consideration.
+
+I look forward to your reply.
+
+\vspace{2\parskip} % Extra whitespace for aesthetics
+\closing{Sincerely,}
+\vspace{2\parskip} % Extra whitespace for aesthetics
+
+\ps{P.S. You can find additional information attached to this letter.} % Postscript text, comment this line to remove it
+
+\encl{Copyright permission form} % Enclosures with the letter, comment this line to remove it
+
+%———————————————————————————————————————————————————————————————————————————————
+% end
+
+\end{letter}
+ 
+\end{document}

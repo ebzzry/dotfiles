@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+
+# NixOS: ~/.nix-profile/share/X11/locale/en_US.UTF-8/Compose
+# aliaj: /usr/share/X11/locale/en_US.UTF-8/Compose
+#include "%L"
+
+# aliaj
+include "%H/hejmo/ktp/xcompose/sistemo.xcompose"
+include "%H/hejmo/ktp/xcompose/emogxioj.xcompose"
+include "%H/hejmo/ktp/xcompose/ceteraj.xcompose"

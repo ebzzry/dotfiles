@@ -1,0 +1,105 @@
+! -*- mode: xmodmap -*-
+
+!---------------------------------------------------------------------------------------------------
+! formato
+!---------------------------------------------------------------------------------------------------
+
+! keycode <Id> = <Key> <Shift+Key> <Mode_switch> <Shift+Mode_switch> <AltGr+Key> <Shift+AltGr+Key>
+
+
+!---------------------------------------------------------------------------------------------------
+! ĉefaj klavoj
+!---------------------------------------------------------------------------------------------------
+
+clear Lock
+
+keysym Caps_Lock = Escape
+keysym Escape = Multi_key
+
+!! Mods
+keycode 64 = Alt_L NoSymbol ISO_Level3_Shift
+keycode 168 = Alt_R NoSymbol ISO_Level3_Shift
+
+!! maldekstra vindozo-klavo, Print
+keycode 133 = Mode_switch NoSymbol
+keycode 107 = Mode_switch NoSymbol
+
+!! sagoj
+! keycode 111 = Up    NoSymbol KP_Up    uparrow
+! keycode 116 = Down  NoSymbol KP_Down  downarrow
+! keycode 113 = Left  NoSymbol KP_Left  leftarrow
+! keycode 114 = Right NoSymbol KP_Right rightarrow
+keycode 111 = Up    NoSymbol uparrow    KP_Up
+keycode 116 = Down  NoSymbol downarrow  KP_Down
+keycode 113 = Left  NoSymbol leftarrow  KP_Left
+keycode 114 = Right NoSymbol rightarrow KP_Right
+
+!! Prior, Next, Home, End
+keycode 112 = Prior NoSymbol KP_Prior
+keycode 117 = Next  NoSymbol KP_Next
+keycode 110 = Home  NoSymbol KP_Home
+keycode 115 = End   NoSymbol KP_End
+
+
+!---------------------------------------------------------------------------------------------------
+! interpunkcioj
+!---------------------------------------------------------------------------------------------------
+
+keycode 20 = bracketleft  braceleft    leftdoublequotemark  guillemotleft
+keycode 21 = bracketright braceright   rightdoublequotemark guillemotright
+keycode 23 = Tab          ISO_Left_Tab
+keycode 24 = apostrophe   quotedbl     rightsinglequotemark rightanglebracket
+keycode 25 = comma        less         minutes              seconds
+keycode 26 = period       greater      periodcentered
+keycode 34 = slash        question     notsign
+keycode 35 = equal        plus         notequal             identical
+keycode 48 = minus        underscore   endash               emdash
+keycode 49 = grave        asciitilde   leftsinglequotemark  leftanglebracket
+keycode 51 = backslash    bar          backslash            vertbar
+keycode 65 = space        space        nobreakspace         hairspace
+
+
+!---------------------------------------------------------------------------------------------------
+! nombroj
+!---------------------------------------------------------------------------------------------------
+
+keycode 10 = 1 exclam      KP_1
+keycode 11 = 2 at          KP_2
+keycode 12 = 3 numbersign  KP_3
+keycode 13 = 4 dollar      KP_4 EuroSign
+keycode 14 = 5 percent     KP_5
+keycode 15 = 6 asciicircum KP_6
+keycode 16 = 7 ampersand   KP_7
+keycode 17 = 8 asterisk    KP_8
+keycode 18 = 9 parenleft   KP_9
+keycode 19 = 0 parenright  KP_0
+
+
+!---------------------------------------------------------------------------------------------------
+! literoj
+!---------------------------------------------------------------------------------------------------
+
+keycode 31 = c C ccircumflex Ccircumflex
+keycode 30 = g G gcircumflex Gcircumflex
+keycode 44 = h H hcircumflex Hcircumflex
+keycode 42 = i I icircumflex Icircumflex
+keycode 54 = j J jcircumflex Jcircumflex
+keycode 46 = n N notsign
+keycode 47 = s S scircumflex Scircumflex
+keycode 41 = u U ubreve      Ubreve
+keycode 42 = v V diamond
+keycode 56 = x X multiply
+keycode 61 = z Z openstar
+
+
+!---------------------------------------------------------------------------------------------------
+! signoj
+!---------------------------------------------------------------------------------------------------
+
+keycode 33 = l L Greek_lamda Greek_LAMDA
+keycode 38 = a A logicaland
+keycode 39 = o O logicalor
+keycode 40 = e E emptyset
+keycode 43 = d D Greek_delta Greek_DELTA
+keycode 27 = p P Greek_phi Greek_PHI
+keycode 58 = m M Greek_mu Greek_MU

@@ -1,0 +1,18 @@
+set nocompatible
+set laststatus=0
+set cmdheight=1
+set nomodifiable
+set readonly
+set background=dark
+set ignorecase
+
+nmap <Up> <C-Y>
+nmap <Down> <C-E>
+nmap k <C-Y>
+nmap j <C-E>
+nmap b <C-b><C-g>
+nmap <Backspace> <C-b><C-g>
+nmap <Space> <C-f><C-g>
+nmap q :q!<CR>
+
+syntax enable

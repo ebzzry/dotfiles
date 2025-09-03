@@ -1,0 +1,60 @@
+# -*- coding: utf-8 -*-
+
+# valutaj simboloj
+<Multi_key> <p> <p> : "₱"
+<Multi_key> <c> <equal> : "€"
+
+# makintoŝaj simboloj
+<Multi_key> <M> <c> : "⌘"
+<Multi_key> <M> <o> : "⌥"
+<Multi_key> <M> <s> : "⇧"
+
+# ñ kaj Ñ
+<Multi_key> <asciitilde> <n> : "ñ" U00F1
+<Multi_key> <asciitilde> <N> : "Ñ" U00D1
+
+# guillemet https://en.wikipedia.org/wiki/Guillemet#Guillemet_vs._guillemot
+<Multi_key> <less> <less> : "«"
+<Multi_key> <greater> <greater> : "»"
+
+# kopirajta kaj varmarka simboloj
+<Multi_key> <c> <o> : "©"
+<Multi_key> <r> <o> : "®"
+<Multi_key> <t> <m> : "™"
+
+# cita haltostreko
+<Multi_key> <underscore> <underscore> : "―"
+
+# figura haltostreko
+<Multi_key> <underscore> <circumflex> : "‒"
+
+# malrompa streketo
+<Multi_key> <space> <minus> : "‑"
+
+# majuskletoj
+<Multi_key> <Multi_key> <a> <a> : "ᴀ"
+<Multi_key> <Multi_key> <b> <b> : "ʙ"
+<Multi_key> <Multi_key> <c> <c> : "ᴄ"
+<Multi_key> <Multi_key> <d> <d> : "ᴅ"
+<Multi_key> <Multi_key> <e> <e> : "ᴇ"
+<Multi_key> <Multi_key> <f> <f> : "ғ"
+<Multi_key> <Multi_key> <g> <g> : "ɢ"
+<Multi_key> <Multi_key> <h> <h> : "ʜ"
+<Multi_key> <Multi_key> <i> <i> : "ɪ"
+<Multi_key> <Multi_key> <j> <j> : "ᴊ"
+<Multi_key> <Multi_key> <k> <k> : "ᴋ"
+<Multi_key> <Multi_key> <l> <l> : "ʟ"
+<Multi_key> <Multi_key> <m> <m> : "ᴍ"
+<Multi_key> <Multi_key> <n> <n> : "ɴ"
+<Multi_key> <Multi_key> <o> <o> : "ᴏ"
+<Multi_key> <Multi_key> <p> <p> : "ᴘ"
+<Multi_key> <Multi_key> <q> <q> : "ǫ"
+<Multi_key> <Multi_key> <r> <r> : "ʀ"
+<Multi_key> <Multi_key> <s> <s> : "s"
+<Multi_key> <Multi_key> <t> <t> : "ᴛ"
+<Multi_key> <Multi_key> <u> <u> : "ᴜ"
+<Multi_key> <Multi_key> <v> <v> : "ᴠ"
+<Multi_key> <Multi_key> <w> <w> : "ᴡ"
+<Multi_key> <Multi_key> <x> <x> : "x"
+<Multi_key> <Multi_key> <y> <y> : "ʏ"
+<Multi_key> <Multi_key> <z> <z> : "ᴢ"

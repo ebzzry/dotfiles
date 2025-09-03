@@ -1,0 +1,93 @@
+! -*- mode: xmodmap -*-
+
+! Xmodmap file for the Kinesis Advantage360 Professional, QWERTY layout
+
+!---------------------------------------------------------------------------------------------------
+! formato
+! keycode <Id> = <Key> <Shift+Key> <Mode_switch> <Shift+Mode_switch> <AltGr+Key> <Shift+AltGr+Key>
+
+!---------------------------------------------------------------------------------------------------
+! ĉefaj klavoj
+
+keycode 9 = Escape
+
+!! Alt
+keycode 64 = Mode_switch
+keycode 108 = Mode_switch
+
+!! Win
+keycode 133 = Alt_L
+keycode 134 = Alt_R
+
+!! sagoj
+keycode 111 = Up    Prior KP_Up    uparrow
+keycode 116 = Down  Next  KP_Down  downarrow
+keycode 113 = Left  Home  KP_Left  leftarrow
+keycode 114 = Right End   KP_Right rightarrow
+
+!! Prior, Next, Home, End
+! keycode = Prior NoSymbol Home
+! keycode = Next  NoSymbol End
+
+!---------------------------------------------------------------------------------------------------
+! interpunkcioj
+
+keycode 21 = equal        plus         notequal             identical
+keycode 20 = backslash    bar          backslash            vertbar
+keycode 34 = bracketleft  braceleft    leftdoublequotemark  guillemotleft
+keycode 35 = bracketright braceright   rightdoublequotemark guillemotright
+keycode 61 = slash        question     division
+
+keycode 23 = Tab          ISO_Left_Tab
+keycode 48 = apostrophe   quotedbl     rightsinglequotemark rightanglebracket
+keycode 25 = comma        less         minutes              seconds
+keycode 26 = period       greater      periodcentered
+
+keycode 47 = semicolon    colon
+keycode 20 = minus        underscore   endash               emdash
+keycode 49 = grave        asciitilde   leftsinglequotemark  leftanglebracket
+keycode 65 = space        space        nobreakspace         hairspace
+
+!---------------------------------------------------------------------------------------------------
+! nombroj
+
+keycode 10 = 1 exclam
+keycode 11 = 2 at
+keycode 12 = 3 numbersign
+keycode 13 = 4 dollar
+keycode 14 = 5 percent
+keycode 15 = 6 asciicircum
+keycode 16 = 7 ampersand
+keycode 17 = 8 asterisk
+keycode 18 = 9 parenleft
+keycode 19 = 0 parenright
+
+!---------------------------------------------------------------------------------------------------
+! literoj
+
+keycode 38 = a A logicaland
+keycode 56 = b B
+keycode 54 = c C ccircumflex Ccircumflex
+keycode 40 = d D degree
+keycode 26 = e E EuroSign
+keycode 41 = f F LiraSign
+keycode 42 = g G gcircumflex Gcircumflex
+keycode 43 = h H hcircumflex Hcircumflex
+keycode 31 = i I paragraph
+keycode 44 = j J jcircumflex Jcircumflex
+keycode 45 = k K copyright trademark
+keycode 46 = l L Greek_lambda
+keycode 58 = m M
+keycode 57 = n N notsign
+keycode 32 = o O logicalor
+keycode 33 = p P
+keycode 24 = q Q
+keycode 27 = r R registered
+keycode 39 = s S scircumflex Scircumflex
+keycode 28 = t T
+keycode 30 = u U ubreve Ubreve
+keycode 55 = v V diamond
+keycode 25 = w W WonSign
+keycode 53 = x X multiply
+keycode 29 = y Y yen
+keycode 52 = z Z openstar

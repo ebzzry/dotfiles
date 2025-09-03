@@ -1,0 +1,4 @@
+;;;; -*- mode: lisp -*-
+
+(ql:quickload :stumpo)
+(stumpo:pravalorizi)
